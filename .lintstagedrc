@@ -1,0 +1,17 @@
+{
+    "**/*.{js,jsx,tsx,ts}": [
+        "prettier --config=.prettierrc.cjs --write",
+        "cross-env NO_LOGS=true eslint -c ./.eslintrc.cjs --fix"
+    ],
+    "*.{json,yml,yaml,less,css,scss,sass}": [
+        "prettier --config=.prettierrc.cjs --write"
+    ],
+    "*.{md,mdx}": [
+        "prettier --config=.prettierrc.cjs --write",
+        "cross-env NO_LOGS=true eslint -c ./.eslintrc.cjs --fix"
+    ],
+    "{packages,support}/**/*.{js,jsx,tsx,ts}": [
+        "prettier --config=.prettierrc.cjs --write",
+        "cross-env NO_LOGS=true eslint -c ./.eslintrc.cjs --fix"
+    ]
+}

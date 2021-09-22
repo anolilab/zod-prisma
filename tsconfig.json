@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "React + Node 12",
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "es5",
+        "lib": ["dom", "es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
+
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "strict": true,
+        "declaration": true,
+        "allowJs": true,
+
+        /* Additional Checks */
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /* Module Resolution Options */
+        "moduleResolution": "node",
+        "isolatedModules": true,
+//        "importsNotUsedAsValues": "error",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "jest",
+        "stories",
+        "__tests__",
+        "babel.config.cjs"
+    ]
+}

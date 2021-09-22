@@ -1,0 +1,53 @@
+{
+    "name": "{{name}}",
+    "version": "0.0.0",
+    "description": "{{description}}",
+    "keywords": [
+        "anolilab"
+    ],
+    "homepage": "{{homepage}}",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/{{repository}}.git",
+        "directory": "packages/{{directory}}"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "require": "./dist/{{export_name}}.cjs.js",
+            "default": "./dist/{{export_name}}.esm.js"
+        }
+    },
+    "main": "dist/{{export_name}}.cjs.js",
+    "module": "dist/{{export_name}}.esm.js",
+    "types": "dist/{{export_name}}.cjs.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "typescript": "^4.4.2"
+    },
+    "peerDependencies": {
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "preconstruct": {
+        "entrypoints": [
+            "index.ts"
+    }
+}

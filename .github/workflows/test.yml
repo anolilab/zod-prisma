@@ -1,0 +1,67 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Test Packages"
+
+on: # yamllint disable-line rule:truthy
+    pull_request:
+        branches:
+            - "([0-9])?(.{+([0-9]),x}).x"
+            - "main"
+            - "next"
+            - "next-major"
+            - "alpha"
+            - "beta"
+
+jobs:
+    test:
+        name: "tests"
+
+        runs-on: "ubuntu-latest"
+
+        steps:
+            - name: "Git checkout"
+              uses: "actions/checkout@v2"
+              with:
+                  fetch-depth: 0
+                  persist-credentials: false
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Configure Container"
+              env:
+                  GIT_USER_EMAIL: "${{ secrets.GIT_USER_EMAIL }}"
+                  GIT_USER_USERNAME: "${{ secrets.GIT_USER_USERNAME }}"
+              run: |
+                  EMAIL=${GIT_USER_EMAIL:-"github-actions[bot]@users.noreply.github.com"}
+                  NAME=${GIT_USER_USERNAME:-"github-actions-shell"}
+
+                  git config --global user.email "${EMAIL}"
+                  git config --global user.name "${NAME}"
+
+            - name: "Use Node.js 14.x"
+              uses: "actions/setup-node@v2"
+              with:
+                  node-version: "14.x"
+
+            - name: "Get yarn cache directory path"
+              id: "yarn-cache-dir-path"
+              run: "echo \"::set-output name=dir::$(yarn config get cacheFolder)\""
+
+            - uses: "actions/cache@v2"
+              id: "yarn-cache" # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+              with:
+                  path: "${{ steps.yarn-cache-dir-path.outputs.dir }}"
+                  key: "${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}"
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: "update yarn to v3"
+              run: "yarn set version 3.0.1"
+
+            - name: "install"
+              run: "yarn install --immutable"
+
+            - name: "test and coverage"
+              run: "yarn run test:coverage"
