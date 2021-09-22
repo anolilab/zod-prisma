@@ -114,15 +114,15 @@ repository:
     archived: false
     default_branch: "main"
     delete_branch_on_merge: true
-    description: "Provides a GitHub mono repository template for a Anolilab Node libraries, using GitHub actions."
+    description: "Helpful packages to work with prisma and zod."
     has_downloads: true
     has_issues: true
     has_pages: false
     has_projects: false
     has_wiki: false
-    name: "node-mono-library-template"
+    name: "zod-prisma"
     private: true
 
     # https://developer.github.com/v3/repos/branches/#remove-branch-protection
 
-    topics: "anolilab, typescript"
+    topics: "anolilab, typescript, prisma, zod"

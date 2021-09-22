@@ -1,9 +1,9 @@
 {
-    "name": "@anolilab/node-mono-library-template",
+    "name": "@anolilab/zod-prisma",
     "version": "0.0.0",
     "private": true,
     "description": "Provides a GitHub mono repository template for a Anolilab Node libraries, using GitHub actions.",
-    "repository": "anolilab/node-mono-library-template",
+    "repository": "anolilab/zod-prisma",
     "license": "MIT",
     "author": {
         "name": "Daniel Bannert",
@@ -77,6 +77,9 @@
         "ts-jest": "^27.0.5",
         "ts-node": "^10.2.1",
         "typescript": "^4.4.3"
+    },
+    "engines": {
+        "node": ">=12"
     },
     "modulePathIgnorePatterns": [
         "./package.json"

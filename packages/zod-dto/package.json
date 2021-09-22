@@ -1,0 +1,55 @@
+{
+    "name": "@anolilab/zod-dto",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [
+        "anolilab",
+        "zod",
+        "dto"
+    ],
+    "homepage": "https://anolilab.com/nodejs/packages/anolilab/zod-dto",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/prisma.git",
+        "directory": "packages/zod-dto"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "require": "./dist/anolilab-zod-dto.cjs.js",
+            "default": "./dist/anolilab-zod-dto.esm.js"
+        }
+    },
+    "main": "dist/anolilab-zod-dto.cjs.js",
+    "module": "dist/anolilab-zod-dto.esm.js",
+    "types": "dist/anolilab-zod-dto.cjs.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "devDependencies": {
+        "typescript": "^4.4.3",
+        "zod": "^3.8.2"
+    },
+    "peerDependencies": {
+        "zod": "^3.8.2"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "preconstruct": {
+        "entrypoints": [
+            "index.ts"
+        ]
+    }
+}

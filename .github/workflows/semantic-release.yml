@@ -36,10 +36,10 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - name: "Use Node.js 14.x"
+            - name: "Use Node.js 12.x"
               uses: "actions/setup-node@v2"
               with:
-                  node-version: "14.x"
+                  node-version: "12.x"
                   # Enable this to use the github packages
                   # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
@@ -95,10 +95,10 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - name: "Use Node.js 14.x"
+            - name: "Use Node.js 12.x"
               uses: "actions/setup-node@v2"
               with:
-                  node-version: "14.x"
+                  node-version: "12.x"
                   # Enable this to use the github packages
                   # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file

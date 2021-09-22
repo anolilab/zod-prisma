@@ -1,15 +1,4 @@
-<p align="center">
-  Add your <em>motivational</em> tagline here.
-</p>
-
-<br />
-
-<p align="center">
-  <a href="#getting-started"><strong>Getting Started</strong></a> ·
-  <a href="#why"><strong>Why?</strong></a> ·
-  <a href="docs"><strong>Documentation</strong></a> ·
-  <a href="docs/contributing.md"><strong>Contributing</strong></a>
-</p>
+# DTO’s (Data Transfer Object) based on zod
 
 ---
 
@@ -23,9 +12,34 @@
 
 ---
 
-## Packages
+# Installation
 
-[@anolilab/zod-dto](./packages/zod-dto) - package with  base zod dto’s
+Use npm or yarn to install
+
+```bash
+    npm install @anolilab/zod-dto --save
+```
+
+Or
+
+```bash
+    yarn add @anolilab/zod-dto
+```
+
+# Usage
+
+## Basic usage
+
+```js
+import { StringDto } from "@anolilab/zod-dto"
+
+const dto = new StringDto("test string"); // the constructor has a zod validator
+```
+
+You can transform the object to a json with
+```js
+dto.toJson()
+```
 
 ## Versioning
 
@@ -54,3 +68,4 @@ License
 -------------
 
 The anolilab zod-prisma is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+
