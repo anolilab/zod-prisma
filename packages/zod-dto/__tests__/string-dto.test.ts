@@ -2,7 +2,7 @@ import { StringDto } from "../src";
 
 const string = "test";
 
-describe("NumberDto dto", () => {
+describe("StringDto dto", () => {
     test("it should validate input to be a number", () => {
         const dto = new StringDto(string);
 

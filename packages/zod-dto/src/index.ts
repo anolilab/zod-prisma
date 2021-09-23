@@ -19,3 +19,7 @@ export { zStringDto, StringDto } from "./string-dto";
 export type { StringDtoValue } from "./string-dto";
 export { zUrlDto, UrlDto } from "./url-dto";
 export type { UrlDtoValue } from "./url-dto";
+export { zUuidDto, UuidDto } from "./uuid-dto";
+export type { UuidDtoValue } from "./uuid-dto";
+export { zCuidDto, CuidDto } from "./cuid-dto";
+export type { CuidDtoValue } from "./cuid-dto";

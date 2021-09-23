@@ -2,7 +2,7 @@ import { StringArrayDto } from "../src";
 
 const array = ["test", "test2"];
 
-describe("NumberDto dto", () => {
+describe("StringArrayDto dto", () => {
     test("it should validate input to be a number", () => {
         const dto = new StringArrayDto(array);
 

@@ -2,7 +2,7 @@ import { UrlDto } from "../src";
 
 const url = "http://example.com";
 
-describe("NumberDto dto", () => {
+describe("UrlDto dto", () => {
     test("it should validate input to be a url", () => {
         const dto = new UrlDto(url);
 
