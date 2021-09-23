@@ -3,12 +3,12 @@ const path = require("path");
 /**
  * @param {string[]} paths - the paths
  */
-const baseDir = (...paths) => path.resolve(__dirname, "..", "..", path.join(...paths));
+const baseDirection = (...paths) => path.resolve(__dirname, "..", path.join(...paths));
 
 /**
  * @param {string[]} args - the paths
  */
-const jestSupportDir = (...args) => baseDir(path.join("support", "jest", ...args));
+const jestDirection = (...args) => baseDirection(path.join("jest", ...args));
 
 const environment = {
     get isUnit() {
@@ -32,6 +32,6 @@ const environment = {
     },
 };
 
-exports.baseDir = baseDir;
-exports.jestSupportDir = jestSupportDir;
+exports.baseDirection = baseDirection;
+exports.jestDirection = jestDirection;
 exports.environment = environment;

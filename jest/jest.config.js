@@ -1,4 +1,4 @@
-const { jestSupportDir, baseDir } = require("./helpers");
+const { jestDirection, baseDirection } = require("./helpers");
 
 const { TEST_BUILD } = process.env;
 
@@ -17,8 +17,8 @@ module.exports = {
     },
     moduleDirectories: ["node_modules"],
     testPathIgnorePatterns: ["<rootDir>/lib/", "<rootDir>/node_modules/"],
-    testRegex: "/__tests__/.*\\.spec\\.tsx?$",
-    setupFilesAfterEnv: [jestSupportDir("jest.framework.ts"), jestSupportDir("jest.framework.dom.ts")],
-    cacheDirectory: baseDir(".jest", TEST_BUILD ? "build" : "aliased"),
+    // testRegex: "packages/.*/__tests__/.*\\.spec\\.tsx?$",
+    setupFilesAfterEnv: [jestDirection("jest.framework.ts"), jestDirection("jest.framework.dom.ts")],
+    cacheDirectory: baseDirection(".jest", TEST_BUILD ? "build" : "aliased"),
     errorOnDeprecated: true,
 };

@@ -15,12 +15,11 @@ module.exports = {
         "!**/__tests__/**",
         "!**/__dts__/**",
         "!**/__fixtures__/**",
-        "!support/**",
         "!website/**",
     ],
     coverageReporters: ["json", "lcov", "text-summary", "clover"],
     collectCoverage: true,
     watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
     testRunner: "jest-circus/runner",
-    testPathIgnorePatterns: ["<rootDir>/support/", "/node_modules/"],
+    testPathIgnorePatterns: ["/node_modules/"],
 };
