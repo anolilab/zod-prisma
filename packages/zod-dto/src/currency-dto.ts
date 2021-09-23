@@ -7,10 +7,12 @@ export const zCurrencyDto = z.string().length(3);
 export type CurrencyDtoValue = z.infer<typeof zCurrencyDto>;
 
 export class CurrencyDto extends AbstractDto {
-    constructor(public value: CurrencyDtoValue) {
+    constructor(value: CurrencyDtoValue) {
         super();
 
         zCurrencyDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

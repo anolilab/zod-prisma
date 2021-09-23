@@ -7,10 +7,12 @@ export const zStringArrayDto = z.array(z.string());
 export type StringArrayDtoValue = z.infer<typeof zStringArrayDto>;
 
 export class StringArrayDto extends AbstractDto {
-    constructor(public value: StringArrayDtoValue) {
+    constructor(value: StringArrayDtoValue) {
         super();
 
         zStringArrayDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

@@ -7,10 +7,12 @@ export const zBooleanDto = z.boolean();
 export type BooleanDtoValue = z.infer<typeof zBooleanDto>;
 
 export class BooleanDto extends AbstractDto {
-    constructor(public value: BooleanDtoValue) {
+    constructor(value: BooleanDtoValue) {
         super();
 
         zBooleanDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

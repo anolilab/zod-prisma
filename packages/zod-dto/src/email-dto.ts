@@ -16,4 +16,8 @@ export class EmailDto extends AbstractDto {
 
         Object.freeze(this);
     }
+
+    static nullable(value: EmailDtoValue | null) {
+        return value === null ? null : new EmailDto(value);
+    }
 }

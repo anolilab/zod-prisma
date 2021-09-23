@@ -7,10 +7,12 @@ export const zDatetimeDto = z.date();
 export type DatetimeDtoValue = z.infer<typeof zDatetimeDto>;
 
 export class DatetimeDto extends AbstractDto {
-    constructor(public value: DatetimeDtoValue) {
+    constructor(value: DatetimeDtoValue) {
         super();
 
         zDatetimeDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

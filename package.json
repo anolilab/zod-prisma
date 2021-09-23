@@ -2,7 +2,7 @@
     "name": "@anolilab/zod-prisma",
     "version": "0.0.0",
     "private": true,
-    "description": "Provides a GitHub mono repository template for a Anolilab Node libraries, using GitHub actions.",
+    "description": "Helpful packages to work with prisma and zod.",
     "repository": "anolilab/zod-prisma",
     "license": "MIT",
     "author": {

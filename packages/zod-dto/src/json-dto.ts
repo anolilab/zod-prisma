@@ -12,10 +12,12 @@ export const zJsonDto: z.ZodSchema<JsonSchema> = z.lazy(() => z.union([literalSc
 export type JsonDtoValue = z.infer<typeof zJsonDto>;
 
 export class JsonDto extends AbstractDto {
-    constructor(public value: JsonDtoValue) {
+    constructor(value: JsonDtoValue) {
         super();
 
         zJsonDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

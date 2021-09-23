@@ -34,11 +34,13 @@ Or
 import { StringDto } from "@anolilab/zod-dto"
 
 const dto = new StringDto("test string"); // the constructor has a zod validator
+
+console.log(dto.value) // returns "test string"
 ```
 
 You can transform the object to a json with
 ```js
-dto.toJson()
+dto.toJson() // returns { value: "test string" }
 ```
 
 ## Versioning

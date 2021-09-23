@@ -7,10 +7,12 @@ export const zStringDto = z.string();
 export type StringDtoValue = z.infer<typeof zStringDto>;
 
 export class StringDto extends AbstractDto {
-    constructor(public value: StringDtoValue) {
+    constructor(value: StringDtoValue) {
         super();
 
         zStringDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

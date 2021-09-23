@@ -7,10 +7,12 @@ export const zNumberDto = z.number();
 export type NumberDtoValue = z.infer<typeof zNumberDto>;
 
 export class NumberDto extends AbstractDto {
-    constructor(public value: NumberDtoValue) {
+    constructor(value: NumberDtoValue) {
         super();
 
         zNumberDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }

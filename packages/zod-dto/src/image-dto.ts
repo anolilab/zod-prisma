@@ -10,6 +10,7 @@ export const zImageDto = z.object({
         height: z.string(),
     }),
     name: z.string().optional(),
+    alt: z.string().optional(),
 });
 
 export type ImageDtoValue = z.infer<typeof zImageDto>;

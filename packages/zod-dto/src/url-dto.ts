@@ -7,10 +7,12 @@ export const zUrlDto = z.string().url();
 export type UrlDtoValue = z.infer<typeof zUrlDto>;
 
 export class UrlDto extends AbstractDto {
-    constructor(public value: UrlDtoValue) {
+    constructor(value: UrlDtoValue) {
         super();
 
         zUrlDto.parse(value);
+
+        this.value = value;
 
         Object.freeze(this);
     }
