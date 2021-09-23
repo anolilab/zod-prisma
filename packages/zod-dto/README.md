@@ -43,6 +43,71 @@ You can transform the object to a json with
 dto.toJson() // returns { value: "test string" }
 ```
 
+## Example of using @anolilab/zod-dto in Entity dto
+
+```ts
+import { NumberDto, StringDto, AbstractDto, DatetimeDto } from "@anolilab/zod-dto";
+
+export default abstract class AbstractEntity {
+    protected abstract properties: object;
+
+    readonly createdAt!: DatetimeDto;
+
+    readonly updatedAt!: DatetimeDto;
+
+    readonly deletedAt!: DatetimeDto;
+
+    public toJson(): string {
+        return JSON.stringify(this.prepareData());
+    }
+
+    public toObject<T extends {}>(): T {
+        return this.prepareData();
+    }
+
+    private prepareData<T extends { [key: string]: any }>(): T {
+        const data: { [key: string]: any } = {};
+
+        Object.entries(this.properties).forEach(([key, value]) => {
+            let v = value;
+
+            if (value instanceof AbstractDto) {
+                v = value.value;
+            } else {
+                throw new TypeError(`Value of key ${key} needs to be a class that extends AbstractDto.`);
+            }
+
+            data[key] = v;
+        });
+
+        return data as any;
+    }
+}
+
+export default class SettingEntity extends AbstractEntity {
+    readonly id!: NumberDto;
+
+    readonly phone!: StringDto;
+
+    constructor(
+        public properties: {
+            id?: NumberDto;
+            phone?: StringDto;
+        },
+    ) {
+        super();
+
+        Object.assign(this, properties);
+        Object.freeze(this);
+    }
+}
+
+const settingEntity = new SettingEntity({
+    id: NumberDto.nullable(1),
+    phone: StringDto.nullable("+4900000"),
+})
+```
+
 ## Versioning
 
 This project uses [SemVer](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/anolilab/zod-prisma/tags).
