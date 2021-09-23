@@ -13,7 +13,7 @@ on: # yamllint disable-line rule:truthy
             - "beta"
 
 # Enable this to use the github packages
-#env:
+env: # yamllint disable-line rule:empty-values
 #    package: "@${{ github.repository }}"
 #    registry_url: "https://npm.pkg.github.com"
 #    scope: "${{ github.repository_owner }}"
