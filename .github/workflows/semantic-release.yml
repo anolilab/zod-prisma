@@ -12,10 +12,11 @@ on: # yamllint disable-line rule:truthy
             - "alpha"
             - "beta"
 
-env:
-    package: "@${{ github.repository }}"
-    registry_url: "https://npm.pkg.github.com"
-    scope: "${{ github.repository_owner }}"
+# Enable this to use the github packages
+#env:
+#    package: "@${{ github.repository }}"
+#    registry_url: "https://npm.pkg.github.com"
+#    scope: "${{ github.repository_owner }}"
 
 jobs:
     semantic-release:
@@ -43,7 +44,7 @@ jobs:
                   # Enable this to use the github packages
                   # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
-                  scope: "@${{ env.scope }}"
+                  # scope: "@${{ env.scope }}"
 
             - name: "Get yarn cache directory path"
               id: "yarn-cache-dir-path"
@@ -69,7 +70,7 @@ jobs:
             - name: "Semantic Release"
               env:
                   GITHUB_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}"
-                  NPM_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_NPM_PACKAGE_TOKEN }}"
+                  NPM_TOKEN: "${{ secrets.NPM_AUTH_TOKEN }}"
                   GIT_AUTHOR_NAME: "github-actions-shell"
                   GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
                   GIT_COMMITTER_NAME: "github-actions-shell"
