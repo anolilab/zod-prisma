@@ -1,3 +1,10 @@
+## @anolilab/zod-dto [1.1.0](https://github.com/anolilab/prisma/compare/@anolilab/zod-dto@1.0.0...@anolilab/zod-dto@1.1.0) (2021-09-23)
+
+
+### Features
+
+* added new uuid and cuid dto ([b7cec2c](https://github.com/anolilab/prisma/commit/b7cec2c58b7a0dd2e29b419f2c146c7ca47db218))
+
 ## @anolilab/zod-dto 1.0.0 (2021-09-23)
 
 
