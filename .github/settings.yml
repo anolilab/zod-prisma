@@ -110,7 +110,7 @@ labels:
 repository:
     allow_merge_commit: true
     allow_rebase_merge: false
-    allow_squash_merge: false
+    allow_squash_merge: true
     archived: false
     default_branch: "main"
     delete_branch_on_merge: true
