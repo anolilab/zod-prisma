@@ -25,6 +25,16 @@
             "default": "./dist/anolilab-zod-dto.esm.js"
         }
     },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
     "main": "dist/anolilab-zod-dto.cjs.js",
     "module": "dist/anolilab-zod-dto.esm.js",
     "types": "dist/anolilab-zod-dto.cjs.d.ts",
