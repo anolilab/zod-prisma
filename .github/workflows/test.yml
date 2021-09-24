@@ -81,3 +81,10 @@ jobs:
                   name: "JEST Tests"
                   path: "./coverage/junit.xml"
                   reporter: "jest-junit"
+
+            - uses: "codecov/codecov-action@v2"
+              with:
+                  flags: unittests # optional
+                  name: codecov-umbrella # optional
+                  fail_ci_if_error: true # optional (default = false)
+                  verbose: true # optional (default = false)

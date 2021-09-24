@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "React + Node 12",
+    "extends": "../../tsconfig.json",
+    "include": ["src", "types"],
+    "baseUrl": "./",
+    "compilerOptions": {
+        "jsx": "react-jsx"
+    }
+}
