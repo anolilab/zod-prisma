@@ -72,12 +72,12 @@ jobs:
               uses: "actions/upload-artifact@v2"
               with:
                   name: "test-results"
-                  path: "__tests__/__results__/*.xml"
+                  path: "./coverage/junit.xml"
 
             - name: "Create test report"
               uses: "dorny/test-reporter@v1"
               if: "success() || failure()"
               with:
                   name: "JEST Tests"
-                  path: "__tests__/__results__/*.xml"
+                  path: "./coverage/junit.xml"
                   reporter: "jest-junit"

@@ -115,4 +115,3 @@ dist
 
 # Jest
 .jest
-/junit.xml

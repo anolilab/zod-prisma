@@ -16,5 +16,5 @@ jobs:
               with:
                   artifact: "test-results"
                   name: "Workflow Report"
-                  path: "*.xml"
+                  path: "./coverage/junit.xml"
                   reporter: "jest-junit"
