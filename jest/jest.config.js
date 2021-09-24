@@ -15,10 +15,12 @@ module.exports = {
     transform: {
         "^.+\\.(js|jsx|ts|tsx)$": [require.resolve("babel-jest"), { rootMode: "upward" }],
     },
+    testRunner: "jest-circus/runner",
     moduleDirectories: ["node_modules"],
     testPathIgnorePatterns: ["<rootDir>/lib/", "<rootDir>/node_modules/"],
     // testRegex: "packages/.*/__tests__/.*\\.spec\\.tsx?$",
     setupFilesAfterEnv: [jestDirection("jest.framework.ts"), jestDirection("jest.framework.dom.ts")],
     cacheDirectory: baseDirection(".jest", TEST_BUILD ? "build" : "aliased"),
     errorOnDeprecated: true,
+    reporters: ["default", ["jest-junit", { suiteName: "jest tests", outputDirectory: "./coverage" }]],
 };

@@ -20,6 +20,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+!coverage/junit.xml
 *.lcov
 
 # nyc test coverage
@@ -113,4 +114,5 @@ dist
 
 .pnp.*
 
+# Jest
 .jest

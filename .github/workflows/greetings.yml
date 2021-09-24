@@ -6,6 +6,8 @@ on: ["pull_request", "issues"] # yamllint disable-line rule:truthy
 
 jobs:
     greeting:
+        name: "greeting"
+
         runs-on: "ubuntu-latest"
 
         steps:
