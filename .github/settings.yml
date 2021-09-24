@@ -121,7 +121,7 @@ repository:
     has_projects: false
     has_wiki: false
     name: "zod-prisma"
-    private: true
+    private: false
 
     # https://developer.github.com/v3/repos/branches/#remove-branch-protection
 
