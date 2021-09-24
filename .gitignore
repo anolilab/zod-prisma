@@ -113,4 +113,6 @@ dist
 
 .pnp.*
 
+# Jest
 .jest
+/junit.xml
