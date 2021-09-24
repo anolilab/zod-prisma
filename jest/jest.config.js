@@ -21,4 +21,5 @@ module.exports = {
     setupFilesAfterEnv: [jestDirection("jest.framework.ts"), jestDirection("jest.framework.dom.ts")],
     cacheDirectory: baseDirection(".jest", TEST_BUILD ? "build" : "aliased"),
     errorOnDeprecated: true,
+    reporters: ["default", "jest-junit"],
 };
