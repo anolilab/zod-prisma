@@ -1,3 +1,10 @@
+### @anolilab/zod-dto [1.1.1](https://github.com/anolilab/prisma/compare/@anolilab/zod-dto@1.1.0...@anolilab/zod-dto@1.1.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* added funding ([3e19c8c](https://github.com/anolilab/prisma/commit/3e19c8cb41e5703b9cdd89513e935ab204b70474))
+
 ## @anolilab/zod-dto [1.1.0](https://github.com/anolilab/prisma/compare/@anolilab/zod-dto@1.0.0...@anolilab/zod-dto@1.1.0) (2021-09-23)
 
 
