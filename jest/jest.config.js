@@ -15,6 +15,7 @@ module.exports = {
     transform: {
         "^.+\\.(js|jsx|ts|tsx)$": [require.resolve("babel-jest"), { rootMode: "upward" }],
     },
+    testRunner: "jest-circus/runner",
     moduleDirectories: ["node_modules"],
     testPathIgnorePatterns: ["<rootDir>/lib/", "<rootDir>/node_modules/"],
     // testRegex: "packages/.*/__tests__/.*\\.spec\\.tsx?$",

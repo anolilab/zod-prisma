@@ -11,6 +11,7 @@ on: # yamllint disable-line rule:truthy
             - "next-major"
             - "alpha"
             - "beta"
+    workflow_dispatch:
 
 jobs:
     test:
@@ -64,12 +65,19 @@ jobs:
               run: "yarn install --immutable"
 
             - name: "test and coverage"
-              run: "yarn run test --reporters=jest-junit --testResultsProcessor=\"jest-junit\""
+              run: "yarn run test --ci --reporters=default --reporters=jest-junit"
 
-            - name: "Test Report"
-              uses: "dorny/test-reporter@v1"
+            - name: "Upload test results"
+              if: "success() || failure()"
+              uses: "actions/upload-artifact@v2"
+              with:
+                  name: "test-results"
+                  path: "__tests__/__results__/*.xml"
+
+            - name: "Create test report"
+              uses: "./"
               if: "success() || failure()"
               with:
                   name: "JEST Tests"
-                  path: "junit.xml"
+                  path: "__tests__/__results__/*.xml"
                   reporter: "jest-junit"
