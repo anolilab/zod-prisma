@@ -158,6 +158,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anolilab/prisma-zod-dto-generator@workspace:packages/prisma-zod-dto-generator":
+  version: 0.0.0-use.local
+  resolution: "@anolilab/prisma-zod-dto-generator@workspace:packages/prisma-zod-dto-generator"
+  dependencies:
+    "@prisma/generator-helper": ^3.1.1
+    typescript: ^4.4.3
+    zod: ^3.8.2
+  peerDependencies:
+    zod: ^3.8.2
+  languageName: unknown
+  linkType: soft
+
 "@anolilab/semantic-release-preset@npm:^1.0.3":
   version: 1.0.3
   resolution: "@anolilab/semantic-release-preset@npm:1.0.3"
@@ -2853,6 +2865,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/debug@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@prisma/debug@npm:3.1.1"
+  dependencies:
+    "@types/debug": 4.1.7
+    debug: 4.3.2
+    ms: 2.1.3
+  checksum: 9d38d0d17168a061867a500b55c0bc97d61135b47c2a892f26c29c132cbb5776e06f27ea646ceee818c37ec7aab4c7de397e48faa229a650f681c71220558602
+  languageName: node
+  linkType: hard
+
+"@prisma/generator-helper@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@prisma/generator-helper@npm:3.1.1"
+  dependencies:
+    "@prisma/debug": 3.1.1
+    "@types/cross-spawn": 6.0.2
+    chalk: 4.1.2
+    cross-spawn: 7.0.3
+  checksum: c67d8dcc76bf98b7d7c20112a265fc5fecc57c09cff32810fbb1b1c64776a853f993ab00b387bfe03d3a0b640353f128af38b3df622684ad76c4d4472f89650e
+  languageName: node
+  linkType: hard
+
 "@qiwi/multi-semantic-release@npm:^3.16.0":
   version: 3.16.0
   resolution: "@qiwi/multi-semantic-release@npm:3.16.0"
@@ -3792,6 +3827,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cross-spawn@npm:6.0.2":
+  version: 6.0.2
+  resolution: "@types/cross-spawn@npm:6.0.2"
+  dependencies:
+    "@types/node": "*"
+  checksum: fa9edd32178878cab3ea8d6d0260639e0fe4860ddb3887b8de53d6e8036e154fc5f313c653f690975aa25025aea8beb83fb0870b931bf8d9202c3ac530a24c9d
+  languageName: node
+  linkType: hard
+
+"@types/debug@npm:4.1.7":
+  version: 4.1.7
+  resolution: "@types/debug@npm:4.1.7"
+  dependencies:
+    "@types/ms": "*"
+  checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:*":
   version: 0.0.50
   resolution: "@types/estree@npm:0.0.50"
@@ -3969,6 +4022,13 @@ __metadata:
   version: 1.2.2
   resolution: "@types/minimist@npm:1.2.2"
   checksum: b8da83c66eb4aac0440e64674b19564d9d86c80ae273144db9681e5eeff66f238ade9515f5006ffbfa955ceff8b89ad2bd8ec577d7caee74ba101431fb07045d
+  languageName: node
+  linkType: hard
+
+"@types/ms@npm:*":
+  version: 0.7.31
+  resolution: "@types/ms@npm:0.7.31"
+  checksum: daadd354aedde024cce6f5aa873fefe7b71b22cd0e28632a69e8b677aeb48ae8caa1c60e5919bb781df040d116b01cb4316335167a3fc0ef6a63fa3614c0f6da
   languageName: node
   linkType: hard
 
@@ -5469,7 +5529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:*, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1":
+"chalk@npm:*, chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -6267,6 +6327,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-spawn@npm:7.0.3, cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "cross-spawn@npm:7.0.3"
+  dependencies:
+    path-key: ^3.1.0
+    shebang-command: ^2.0.0
+    which: ^2.0.1
+  checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^5.1.0":
   version: 5.1.0
   resolution: "cross-spawn@npm:5.1.0"
@@ -6275,17 +6346,6 @@ __metadata:
     shebang-command: ^1.2.0
     which: ^1.2.9
   checksum: 726939c9954fc70c20e538923feaaa33bebc253247d13021737c3c7f68cdc3e0a57f720c0fe75057c0387995349f3f12e20e9bfdbf12274db28019c7ea4ec166
-  languageName: node
-  linkType: hard
-
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "cross-spawn@npm:7.0.3"
-  dependencies:
-    path-key: ^3.1.0
-    shebang-command: ^2.0.0
-    which: ^2.0.1
-  checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
   languageName: node
   linkType: hard
 
@@ -6435,7 +6495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:4.3.2, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -12777,7 +12837,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:*, ms@npm:^2.0.0, ms@npm:^2.1.1, ms@npm:^2.1.2":
+"ms@npm:*, ms@npm:2.1.3, ms@npm:^2.0.0, ms@npm:^2.1.1, ms@npm:^2.1.2":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d

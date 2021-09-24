@@ -1,0 +1,69 @@
+{
+    "name": "@anolilab/prisma-zod-dto-generator",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [
+        "anolilab",
+        "zod",
+        "prisma",
+        "dto"
+    ],
+    "homepage": "https://anolilab.com/nodejs/packages/anolilab/prisma-zod-dto-generator",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/prisma.git",
+        "directory": "packages/prisma-zod-dto-generator"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "require": "./dist/anolilab-prisma-zod-dto-generator.cjs.js",
+            "default": "./dist/anolilab-prisma-zod-dto-generator.esm.js"
+        }
+    },
+    "main": "dist/anolilab-prisma-zod-dto-generator.cjs.js",
+    "module": "dist/anolilab-prisma-zod-dto-generator.esm.js",
+    "types": "dist/anolilab-prisma-zod-dto-generator.cjs.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "dependencies": {
+        "@prisma/generator-helper": "^3.1.1"
+    },
+    "devDependencies": {
+        "typescript": "^4.4.3",
+        "zod": "^3.8.2"
+    },
+    "peerDependencies": {
+        "zod": "^3.8.2"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "preconstruct": {
+        "entrypoints": [
+            "index.ts"
+        ]
+    }
+}
