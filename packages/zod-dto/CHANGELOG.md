@@ -1,3 +1,10 @@
+### @anolilab/zod-dto [1.1.2](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.1.1...@anolilab/zod-dto@1.1.2) (2021-10-05)
+
+
+### Bug Fixes
+
+* fixed wrong link in package.json ([85be41b](https://github.com/anolilab/zod-prisma/commit/85be41bb7598ff1bbfe779995caf1d3929d5616c))
+
 ### @anolilab/zod-dto [1.1.1](https://github.com/anolilab/prisma/compare/@anolilab/zod-dto@1.1.0...@anolilab/zod-dto@1.1.1) (2021-09-24)
 
 
