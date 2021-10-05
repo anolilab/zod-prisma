@@ -6,12 +6,13 @@
         "anolilab",
         "zod",
         "prisma",
-        "dto"
+        "dto",
+        "generator"
     ],
     "homepage": "https://anolilab.com/nodejs/packages/anolilab/prisma-zod-dto-generator",
     "repository": {
         "type": "git",
-        "url": "https://github.com/anolilab/prisma.git",
+        "url": "https://github.com/anolilab/zod-prisma.git",
         "directory": "packages/prisma-zod-dto-generator"
     },
     "funding": [

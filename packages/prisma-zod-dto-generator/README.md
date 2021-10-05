@@ -1,4 +1,4 @@
-# DTO’s (Data Transfer Object) based on [zod](https://github.com/colinhacks/zod)
+# [Prisma](https://github.com/prisma/prisma) DTO’s (Data Transfer Object) based on [zod](https://github.com/colinhacks/zod) generator
 
 ---
 
@@ -17,96 +17,17 @@
 Use npm or yarn to install
 
 ```bash
-    npm install @anolilab/zod-dto --save
+    npm install @anolilab/prisma-zod-dto-generator --save
 ```
 
 Or
 
 ```bash
-    yarn add @anolilab/zod-dto
+    yarn add @anolilab/prisma-zod-dto-generator
 ```
 
 # Usage
-
-## Basic usage
-
-```js
-import { StringDto } from "@anolilab/zod-dto"
-
-const dto = new StringDto("test string"); // the constructor has a zod validator
-
-console.log(dto.value) // returns "test string"
-```
-
-You can transform the object to a json with
-```js
-dto.toJson() // returns { value: "test string" }
-```
-
-## Example of using @anolilab/zod-dto in Entity dto
-
-```ts
-import { NumberDto, StringDto, AbstractDto, DatetimeDto } from "@anolilab/zod-dto";
-
-export default abstract class AbstractEntity {
-    protected abstract properties: object;
-
-    readonly createdAt!: DatetimeDto;
-
-    readonly updatedAt!: DatetimeDto;
-
-    readonly deletedAt!: DatetimeDto;
-
-    public toJson(): string {
-        return JSON.stringify(this.prepareData());
-    }
-
-    public toObject<T extends {}>(): T {
-        return this.prepareData();
-    }
-
-    private prepareData<T extends { [key: string]: any }>(): T {
-        const data: { [key: string]: any } = {};
-
-        Object.entries(this.properties).forEach(([key, value]) => {
-            let v = value;
-
-            if (value instanceof AbstractDto) {
-                v = value.value;
-            } else {
-                throw new TypeError(`Value of key ${key} needs to be a class that extends AbstractDto.`);
-            }
-
-            data[key] = v;
-        });
-
-        return data as any;
-    }
-}
-
-export default class SettingEntity extends AbstractEntity {
-    readonly id!: NumberDto;
-
-    readonly phone!: StringDto;
-
-    constructor(
-        public properties: {
-            id?: NumberDto;
-            phone?: StringDto;
-        },
-    ) {
-        super();
-
-        Object.assign(this, properties);
-        Object.freeze(this);
-    }
-}
-
-const settingEntity = new SettingEntity({
-    id: NumberDto.nullable(1),
-    phone: StringDto.nullable("+4900000"),
-})
-```
+@TODO
 
 ## Versioning
 
