@@ -10,7 +10,7 @@
     "homepage": "https://anolilab.com/nodejs/packages/anolilab/zod-dto",
     "repository": {
         "type": "git",
-        "url": "https://github.com/anolilab/prisma.git",
+        "url": "https://github.com/anolilab/zod-prisma.git",
         "directory": "packages/zod-dto"
     },
     "license": "MIT",
