@@ -235,7 +235,7 @@ __metadata:
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
     "@babel/runtime": ^7.15.4
-    "@manypkg/cli": ^0.18.0
+    "@manypkg/cli": ^0.19.0
     "@preconstruct/cli": ^2.1.4
     "@qiwi/multi-semantic-release": ^3.16.0
     "@testing-library/jest-dom": ^5.14.1
@@ -1811,6 +1811,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@changesets/types@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@changesets/types@npm:4.0.1"
+  checksum: 6e41afd51a672710f4858eb523cee7e4da43318db05792d7d2785ebe7fad24d019c48166893ce48f2df2750cd5586e055d8466fa19b66b56ec3cb8f89ccdfdf4
+  languageName: node
+  linkType: hard
+
 "@commitlint/cli@npm:^13.1.0":
   version: 13.1.0
   resolution: "@commitlint/cli@npm:13.1.0"
@@ -2342,12 +2349,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@manypkg/cli@npm:^0.18.0":
-  version: 0.18.0
-  resolution: "@manypkg/cli@npm:0.18.0"
+"@manypkg/cli@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "@manypkg/cli@npm:0.19.0"
   dependencies:
     "@babel/runtime": ^7.5.5
-    "@manypkg/get-packages": ^1.1.1
+    "@manypkg/get-packages": ^1.1.2
     chalk: ^2.4.2
     detect-indent: ^6.0.0
     find-up: ^4.1.0
@@ -2363,7 +2370,7 @@ __metadata:
     validate-npm-package-name: ^3.0.0
   bin:
     manypkg: bin.js
-  checksum: 801589af8bd9e3b7ce1e25942e5ea0f8348dd6bb17325cf75caffc62ab7f458566179c8cd06a028edbf4754e238a5cfeaecdc8261bc44e3b02fd76271e0f5570
+  checksum: 434062caad74c4072f5956301f6c41b12dfda58e89be72212ff874b69e060b76eb12b3a6031a42fd2a34c2822d4154e9891b1828444743d6ba089573a599b55e
   languageName: node
   linkType: hard
 
@@ -2389,6 +2396,20 @@ __metadata:
     globby: ^11.0.0
     read-yaml-file: ^1.1.0
   checksum: f554d1c1e080267f5c4507137043a4a66cc539b54a7b71a6f38557e23c58e285ebfcfa43a5e0921bf7927108f7bedeb542d08313caa954e6d995955674f051e2
+  languageName: node
+  linkType: hard
+
+"@manypkg/get-packages@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@manypkg/get-packages@npm:1.1.2"
+  dependencies:
+    "@babel/runtime": ^7.5.5
+    "@changesets/types": ^4.0.1
+    "@manypkg/find-root": ^1.1.0
+    fs-extra: ^8.1.0
+    globby: ^11.0.0
+    read-yaml-file: ^1.1.0
+  checksum: 08377c7046adeab53468daf969ff55631121ab9ff625467dfd567ab5f705e30cc09a50ebb7d71200746d4e04654327ed51a3d4f1d251202e9a019d256c817a99
   languageName: node
   linkType: hard
 
