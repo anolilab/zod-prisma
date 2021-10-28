@@ -249,7 +249,7 @@ __metadata:
     browserslist-config-anolilab: ^2.1.4
     commitizen: ^4.2.4
     cross-env: ^7.0.3
-    diffable-html: ^4.1.0
+    diffable-html: ^5.0.0
     eslint: ^7.32.0
     eslint-plugin-jest: ^24.4.2
     eslint-plugin-node: ^11.1.0
@@ -6733,12 +6733,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diffable-html@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "diffable-html@npm:4.1.0"
+"diffable-html@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "diffable-html@npm:5.0.0"
   dependencies:
     htmlparser2: ^3.9.2
-  checksum: f7d76bbe2cdbeebb928d3d625ffd84e2cfcda8ecb7adc5c513faabbc7fa5b69044bdb3ddbc0bded0685e8e52a00272cb0a378f9bb20f36fc85b437ce810f25a8
+  checksum: 9c6eedccdc99e8fe9636fe0b1212f00e0c9372d90dfe4fd6c78e1f8a29de655c72d3f7df4ec65e80999d63aeadbee5acb1815b4d6049b0a76b07730057c8b9a8
   languageName: node
   linkType: hard
 

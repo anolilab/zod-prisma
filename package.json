@@ -61,7 +61,7 @@
         "browserslist-config-anolilab": "^2.1.4",
         "commitizen": "^4.2.4",
         "cross-env": "^7.0.3",
-        "diffable-html": "^4.1.0",
+        "diffable-html": "^5.0.0",
         "eslint": "^7.32.0",
         "eslint-plugin-jest": "^24.4.2",
         "eslint-plugin-node": "^11.1.0",
