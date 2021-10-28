@@ -47,7 +47,7 @@
         "@babel/preset-react": "^7.14.5",
         "@babel/preset-typescript": "^7.15.0",
         "@babel/runtime": "^7.15.4",
-        "@manypkg/cli": "^0.18.0",
+        "@manypkg/cli": "^0.19.0",
         "@preconstruct/cli": "^2.1.4",
         "@qiwi/multi-semantic-release": "^3.16.0",
         "@testing-library/jest-dom": "^5.14.1",
