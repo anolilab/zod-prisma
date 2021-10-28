@@ -63,7 +63,7 @@
         "cross-env": "^7.0.3",
         "diffable-html": "^4.1.0",
         "eslint": "^7.32.0",
-        "eslint-plugin-jest": "^24.4.2",
+        "eslint-plugin-jest": "^25.0.0",
         "eslint-plugin-node": "^11.1.0",
         "husky": "^7.0.2",
         "jest": "^27.2.1",
