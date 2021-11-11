@@ -101,10 +101,10 @@ jobs:
               uses: "actions/setup-node@v2"
               with:
                   node-version: "14.x"
-                  registry-url: "${{ env.registry_url }}"
+                  # Enable this to use the github packages
+                  # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
-                  scope: "@${{ env.scope }}"
-                  always-auth: true
+                  # scope: "@${{ env.scope }}"
 
             - name: "Install pnpm"
               run: "curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6"
