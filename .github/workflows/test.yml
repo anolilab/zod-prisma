@@ -66,7 +66,7 @@ jobs:
               run: "pnpm install --frozen-lockfile"
 
             - name: "test and coverage"
-              run: "pnpm run test --ci --reporters=default --reporters=jest-junit"
+              run: "pnpm jest --verbose --ci --reporters=default --reporters=jest-junit"
 
             - name: "Upload test results"
               if: "success() || failure()"

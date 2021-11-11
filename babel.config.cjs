@@ -7,7 +7,7 @@ module.exports = {
             {
                 targets: browsers["production"],
                 typescript: true,
-                looseClasses: true,
+                looseClasses: false,
                 looseComputedProperties: true,
                 looseParameters: true,
                 looseTemplateLiterals: true,
