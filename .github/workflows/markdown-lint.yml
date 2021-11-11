@@ -31,28 +31,30 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - name: "Use Node.js 12.x"
+            - name: "Use Node.js 16.x"
               uses: "actions/setup-node@v2"
               with:
-                  node-version: "12.x"
+                  node-version: "16.x"
                   registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
                   scope: "@${{ env.scope }}"
 
-            - name: "Get yarn cache directory path"
-              id: "yarn-cache-dir-path"
-              run: "echo \"::set-output name=dir::$(yarn config get cacheFolder)\""
+            - name: "Install pnpm"
+              run: "curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6"
 
-            - uses: "actions/cache@v2"
-              id: "yarn-cache" # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+            - name: "Cache .pnpm-store"
+              uses: "actions/cache@v2"
+              id: "pnpm-cache" # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
               with:
-                  path: "${{ steps.yarn-cache-dir-path.outputs.dir }}"
-                  key: "${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}"
+                  path: "~/.pnpm-store"
+                  key: ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
                   restore-keys: |
-                      ${{ runner.os }}-yarn-
+                      ${{ runner.os }}-pnpm-
 
-            - name: "install"
-              run: "yarn install --immutable"
+            - name: "Install packages"
+              run: "pnpm install --frozen-lockfile"
+              env:
+                  NPM_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_NPM_PACKAGE_TOKEN }}"
 
             - name: "lint"
-              run: "yarn lint:text"
+              run: "pnpm run lint:text"
