@@ -1,3 +1,10 @@
+## @anolilab/zod-dto [1.2.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.1.2...@anolilab/zod-dto@1.2.0) (2021-12-12)
+
+
+### Features
+
+* added new zod function to return/overwrite the zod object of th… ([#20](https://github.com/anolilab/zod-prisma/issues/20)) ([ae37928](https://github.com/anolilab/zod-prisma/commit/ae3792854acb20fc63168deacaba5a91838c6b82))
+
 ### @anolilab/zod-dto [1.1.2](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.1.1...@anolilab/zod-dto@1.1.2) (2021-10-05)
 
 
