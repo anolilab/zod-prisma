@@ -12,8 +12,8 @@ describe("CuidDto dto", () => {
         expect(() => new CuidDto("test@test.com")).toThrow();
     });
 
-    test("it should nullable", () => {
+    test("it should be nullable", () => {
         expect(CuidDto.nullable(null)).toBeNull();
-        expect(CuidDto.nullable(cuid).toJson()).toBe(new CuidDto(cuid).toJson());
+        expect(CuidDto.nullable(cuid)?.toJson()).toBe(new CuidDto(cuid).toJson());
     });
 });
