@@ -1,4 +1,5 @@
 import { JsonDto } from "../src";
+import { ZodType } from "zod";
 
 const json = {
     string: "test",
@@ -11,17 +12,21 @@ describe("JsonDto dto", () => {
     test("it should validate input to be a json", () => {
         const dto = new JsonDto(json);
 
-        expect(dto.value).toBe(json);
-        expect(dto.toJson()).toBe(JSON.stringify({ value: json }));
+        expect(dto.value).toStrictEqual(json);
+        expect(dto.toJson()).toStrictEqual(JSON.stringify({ value: json }));
 
         const stringJson = "{name: string}";
         const stringJsonDto = new JsonDto(stringJson);
 
-        expect(stringJsonDto.toJson()).toBe(JSON.stringify({ value: stringJson }));
+        expect(stringJsonDto.toJson()).toStrictEqual(JSON.stringify({ value: stringJson }));
     });
 
     test("it should nullable", () => {
         expect(JsonDto.nullable(null)).toBeNull();
-        expect(JsonDto.nullable(json).toJson()).toBe(new JsonDto(json).toJson());
+        expect(JsonDto.nullable(json)?.toJson()).toBe(new JsonDto(json).toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(JsonDto.zod()).toBeInstanceOf(ZodType);
     });
 });

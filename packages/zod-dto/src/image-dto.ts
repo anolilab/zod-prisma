@@ -1,3 +1,4 @@
+import type { ZodObject, ZodRawShape } from "zod";
 import { z } from "zod";
 
 import AbstractDto from "./abstract-dto";
@@ -16,7 +17,7 @@ export const zImageDto = z.object({
 export type ImageDtoValue = z.infer<typeof zImageDto>;
 
 export class ImageDto extends AbstractDto {
-    constructor(value: ImageDtoValue) {
+    constructor(value: ImageDtoValue, safe: boolean = false) {
         super();
 
         let image = value.data;
@@ -28,14 +29,16 @@ export class ImageDto extends AbstractDto {
         // eslint-disable-next-line no-param-reassign
         value.data = image as string;
 
-        zImageDto.parse(value);
-
-        this.value = value;
+        this.parse(value, safe, ImageDto.zod());
 
         Object.freeze(this);
     }
 
     static nullable(value: ImageDtoValue | null) {
         return value === null ? null : new ImageDto(value);
+    }
+
+    static zod(): ZodObject<ZodRawShape> {
+        return zImageDto;
     }
 }

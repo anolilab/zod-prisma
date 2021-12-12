@@ -1,4 +1,6 @@
-import { NumberDto } from "../src";
+import { ZodType } from "zod";
+
+import { NumberDto, zNumberDto } from "../src";
 
 describe("NumberDto dto", () => {
     test("it should validate input to be a number", () => {
@@ -12,6 +14,18 @@ describe("NumberDto dto", () => {
 
     test("it should nullable", () => {
         expect(NumberDto.nullable(null)).toBeNull();
-        expect(NumberDto.nullable(2).toJson()).toBe(new NumberDto(2).toJson());
+        expect(NumberDto.nullable(2)?.toJson()).toBe(new NumberDto(2).toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(NumberDto.zod()).toBeInstanceOf(ZodType);
+
+        NumberDto.zod = () => zNumberDto.min(10);
+
+        const number = 11;
+
+        const dto = new NumberDto(number);
+
+        expect(dto.value).toBe(number);
     });
 });

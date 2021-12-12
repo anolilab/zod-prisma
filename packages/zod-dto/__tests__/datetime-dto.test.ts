@@ -1,4 +1,5 @@
 import { DatetimeDto } from "../src";
+import { ZodType } from "zod";
 
 describe("DatetimeDto dto", () => {
     test("it should validate input to be a date time", () => {
@@ -6,8 +7,8 @@ describe("DatetimeDto dto", () => {
 
         const dto = new DatetimeDto(date);
 
-        expect(dto.value).toBe(date);
-        expect(dto.toJson()).toBe(JSON.stringify({ value: date }));
+        expect(dto.value).toStrictEqual(date);
+        expect(dto.toJson()).toStrictEqual(JSON.stringify({ value: date }));
         expect(() => new DatetimeDto("test")).toThrow();
     });
 
@@ -15,6 +16,10 @@ describe("DatetimeDto dto", () => {
         const date = new Date();
 
         expect(DatetimeDto.nullable(null)).toBeNull();
-        expect(DatetimeDto.nullable(date).toJson()).toBe(new DatetimeDto(date).toJson());
+        expect(DatetimeDto.nullable(date)?.toJson()).toBe(new DatetimeDto(date).toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(DatetimeDto.zod()).toBeInstanceOf(ZodType);
     });
 });

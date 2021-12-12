@@ -1,3 +1,4 @@
+import type { ZodString } from "zod";
 import { z } from "zod";
 
 import AbstractDto from "./abstract-dto";
@@ -7,17 +8,21 @@ export const zEmailDto = z.string().email();
 export type EmailDtoValue = z.infer<typeof zEmailDto>;
 
 export class EmailDto extends AbstractDto {
-    constructor(public value: EmailDtoValue) {
+    constructor(public value: EmailDtoValue, safe: boolean = false) {
         super();
 
-        zEmailDto.parse(value);
+        this.parse(value, safe, EmailDto.zod());
 
-        this.value = value.toLowerCase();
+        this.value = this.value.toLowerCase();
 
         Object.freeze(this);
     }
 
     static nullable(value: EmailDtoValue | null) {
         return value === null ? null : new EmailDto(value);
+    }
+
+    static zod(): ZodString {
+        return zEmailDto;
     }
 }

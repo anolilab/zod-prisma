@@ -12,17 +12,19 @@ export const zJsonDto: z.ZodSchema<JsonSchema> = z.lazy(() => z.union([literalSc
 export type JsonDtoValue = z.infer<typeof zJsonDto>;
 
 export class JsonDto extends AbstractDto {
-    constructor(value: JsonDtoValue) {
+    constructor(value: JsonDtoValue, safe: boolean = false) {
         super();
 
-        zJsonDto.parse(value);
-
-        this.value = value;
+        this.parse(value, safe, JsonDto.zod());
 
         Object.freeze(this);
     }
 
     static nullable(value: JsonDtoValue | null) {
         return value === null ? null : new JsonDto(value);
+    }
+
+    static zod(): z.ZodSchema<JsonSchema> {
+        return zJsonDto;
     }
 }

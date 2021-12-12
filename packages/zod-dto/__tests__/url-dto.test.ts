@@ -1,4 +1,6 @@
-import { UrlDto } from "../src";
+import { ZodType } from "zod";
+
+import { UrlDto, zUrlDto } from "../src";
 
 const url = "http://example.com";
 
@@ -9,7 +11,7 @@ describe("UrlDto dto", () => {
         expect(dto.value).toBe(url);
         expect(dto.toJson()).toBe(JSON.stringify({ value: url }));
 
-        expect((new UrlDto("http://www.example.com")).value).toBe("http://www.example.com");
+        expect((new UrlDto(url)).value).toBe(url);
         expect((new UrlDto("https://example.com")).value).toBe("https://example.com");
 
         expect(() => new UrlDto("test@test.com")).toThrow();
@@ -17,6 +19,16 @@ describe("UrlDto dto", () => {
 
     test("it should nullable", () => {
         expect(UrlDto.nullable(null)).toBeNull();
-        expect(UrlDto.nullable(url).toJson()).toBe(new UrlDto(url).toJson());
+        expect(UrlDto.nullable(url)?.toJson()).toBe(new UrlDto(url).toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(UrlDto.zod()).toBeInstanceOf(ZodType);
+
+        UrlDto.zod = () => zUrlDto.min(10);
+
+        const dto = new UrlDto(url);
+
+        expect(dto.value).toBe(url);
     });
 });

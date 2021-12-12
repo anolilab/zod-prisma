@@ -1,4 +1,5 @@
 import { CuidDto } from "../src";
+import { ZodType } from "zod";
 
 const cuid = "ckopqwooh000001la8mbi2im9";
 
@@ -15,5 +16,9 @@ describe("CuidDto dto", () => {
     test("it should be nullable", () => {
         expect(CuidDto.nullable(null)).toBeNull();
         expect(CuidDto.nullable(cuid)?.toJson()).toBe(new CuidDto(cuid).toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(CuidDto.zod()).toBeInstanceOf(ZodType);
     });
 });

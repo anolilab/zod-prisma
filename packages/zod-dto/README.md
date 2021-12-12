@@ -38,10 +38,31 @@ const dto = new StringDto("test string"); // the constructor has a zod validator
 console.log(dto.value) // returns "test string"
 ```
 
+If you don't want Zod to throw errors when validation fails, use `the second parameter of the constructor`.
+This method returns an object containing either the successfully parsed data or a ZodError instance containing detailed information about the validation problems.
+
+
+```js
+import { StringDto } from "@anolilab/zod-dto"
+
+const dto = new StringDto("1", true); // the constructor has a zod validator
+
+console.log(dto.value) // { success: false; error: ZodError }
+```
+
 You can transform the object to a json with
 ```js
 dto.toJson() // returns { value: "test string" }
 ```
+
+You can get the zod object with
+```js
+dto.zod() // returns ZodType
+```
+
+## Extend a DTO
+
+
 
 ## Example of using @anolilab/zod-dto in Entity dto
 
