@@ -1,3 +1,5 @@
+import { ZodType } from "zod";
+
 import { BooleanDto } from "../src";
 
 describe("Boolean dto", () => {
@@ -16,5 +18,9 @@ describe("Boolean dto", () => {
     test("it should nullable", () => {
         expect(BooleanDto.nullable(null)).toBeNull();
         expect(BooleanDto.nullable(true)).toBeTruthy();
+    });
+
+    test("it should return a zod type", () => {
+        expect(BooleanDto.zod()).toBeInstanceOf(ZodType);
     });
 });

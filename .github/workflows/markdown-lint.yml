@@ -10,10 +10,12 @@ on: # yamllint disable-line rule:truthy
         paths:
             - "**.md"
 
-env:
-    package: "@${{ github.repository }}"
-    registry_url: "https://npm.pkg.github.com"
-    scope: "${{ github.repository_owner }}"
+# Enable this to use the github packages
+# yamllint disable-line rule:comments
+#env:
+#    package: "@${{ github.repository }}"
+#    registry_url: "https://npm.pkg.github.com"
+#    scope: "${{ github.repository_owner }}"
 
 jobs:
     text-lint:
@@ -25,19 +27,32 @@ jobs:
             - name: "Git checkout"
               uses: "actions/checkout@v2"
               with:
-                  fetch-depth: 2
+                  fetch-depth: 0
+                  persist-credentials: false
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
+            - name: "Configure Container"
+              env:
+                  GIT_USER_EMAIL: "${{ secrets.GIT_USER_EMAIL }}"
+                  GIT_USER_USERNAME: "${{ secrets.GIT_USER_USERNAME }}"
+              run: |
+                  EMAIL=${GIT_USER_EMAIL:-"github-actions[bot]@users.noreply.github.com"}
+                  NAME=${GIT_USER_USERNAME:-"github-actions-shell"}
+
+                  git config --global user.email "${EMAIL}"
+                  git config --global user.name "${NAME}"
+
             - name: "Use Node.js 14.x"
               uses: "actions/setup-node@v2"
               with:
                   node-version: "14.x"
-                  registry-url: "${{ env.registry_url }}"
+                  # Enable this to use the github packages
+                  # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
-                  scope: "@${{ env.scope }}"
+                  # scope: "@${{ env.scope }}"
 
             - name: "Install pnpm"
               run: "curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6"
@@ -53,8 +68,6 @@ jobs:
 
             - name: "Install packages"
               run: "pnpm install --frozen-lockfile"
-              env:
-                  NPM_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_NPM_PACKAGE_TOKEN }}"
 
             - name: "lint"
               run: "pnpm run lint:text"

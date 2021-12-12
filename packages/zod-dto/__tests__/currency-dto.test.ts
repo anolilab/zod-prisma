@@ -1,3 +1,5 @@
+import { z, ZodType } from "zod";
+
 import { CurrencyDto } from "../src";
 
 describe("CurrencyDto dto", () => {
@@ -12,6 +14,17 @@ describe("CurrencyDto dto", () => {
 
     test("it should nullable", () => {
         expect(CurrencyDto.nullable(null)).toBeNull();
-        expect(CurrencyDto.nullable("EUR").toJson()).toBe(new CurrencyDto("EUR").toJson());
+        expect(CurrencyDto.nullable("EUR")?.toJson()).toBe(new CurrencyDto("EUR").toJson());
+    });
+
+    test("it should return a zod type", () => {
+        expect(CurrencyDto.zod()).toBeInstanceOf(ZodType);
+
+        CurrencyDto.zod = () => z.string().length(4);
+
+        const stringLength = "EUR0";
+        const dto = new CurrencyDto(stringLength);
+
+        expect(dto.value).toBe(stringLength);
     });
 });
