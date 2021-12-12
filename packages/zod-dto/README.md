@@ -38,7 +38,7 @@ const dto = new StringDto("test string"); // the constructor has a zod validator
 console.log(dto.value) // returns "test string"
 ```
 
-If you don't want Zod to throw errors when validation fails, use `the second parameter of the constructor`.
+If you don’t want Zod to throw errors when validation fails, use `the second parameter of the constructor`.
 This method returns an object containing either the successfully parsed data or a ZodError instance containing detailed information about the validation problems.
 
 
