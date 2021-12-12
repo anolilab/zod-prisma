@@ -58,7 +58,7 @@ jobs:
               id: "pnpm-cache" # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
               with:
                   path: "~/.pnpm-store"
-                  key: "${{ runner.os }}-node14.x-${{ hashFiles('**/pnpm-lock.yaml') }}"
+                  key: "${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}"
                   restore-keys: |
                       ${{ runner.os }}-pnpm-
 

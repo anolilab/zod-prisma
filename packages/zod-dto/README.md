@@ -39,8 +39,12 @@ console.log(dto.value) // returns "test string"
 ```
 
 If you don’t want Zod to throw errors when validation fails, use `the second parameter of the constructor`.
+
+<!-- textlint-disable write-good -->
+
 This method returns an object containing either the successfully parsed data or a ZodError instance containing detailed information about the validation problems.
 
+<!-- textlint-enable write-good -->
 
 ```js
 import { StringDto } from "@anolilab/zod-dto"
@@ -59,10 +63,6 @@ You can get the zod object with
 ```js
 dto.zod() // returns ZodType
 ```
-
-## Extend a DTO
-
-
 
 ## Example of using @anolilab/zod-dto in Entity dto
 
@@ -142,7 +142,11 @@ post on why we think this is important](https://medium.com/the-node-js-collectio
 Contributing
 ------------
 
-If you would like to help take a look at the [list of issues](https://github.com/anolilab/zod-prisma/issues) and check our [Contributing](.github/CONTRIBUTING.md) guild.
+<!-- textlint-disable no-dead-link -->
+
+If you would like to help take a look at the [list of issues](https://github.com/anolilab/zod-prisma/issues) and check our [Contributing](./.github/CONTRIBUTING.md) guild.
+
+<!-- textlint-enable no-dead-link -->
 
 > **Note:** please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
