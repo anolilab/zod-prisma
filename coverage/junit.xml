@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="24" failures="0" errors="0" time="7.428">
-  <testsuite name="UuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="4.615" tests="2">
-    <testcase classname="UuidDto dto it should validate input to be a uuid" name="UuidDto dto it should validate input to be a uuid" time="0.353">
+<testsuites name="jest tests" tests="24" failures="0" errors="0" time="8.639">
+  <testsuite name="JsonDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.03" tests="2">
+    <testcase classname="JsonDto dto it should validate input to be a json" name="JsonDto dto it should validate input to be a json" time="0.021">
     </testcase>
-    <testcase classname="UuidDto dto it should nullable" name="UuidDto dto it should nullable" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="JsonDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="4.649" tests="2">
-    <testcase classname="JsonDto dto it should validate input to be a json" name="JsonDto dto it should validate input to be a json" time="0.017">
-    </testcase>
-    <testcase classname="JsonDto dto it should nullable" name="JsonDto dto it should nullable" time="0.026">
+    <testcase classname="JsonDto dto it should nullable" name="JsonDto dto it should nullable" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="NumberDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="4.706" tests="2">
-    <testcase classname="NumberDto dto it should validate input to be a number" name="NumberDto dto it should validate input to be a number" time="0.237">
-    </testcase>
-    <testcase classname="NumberDto dto it should nullable" name="NumberDto dto it should nullable" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="StringDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="4.835" tests="2">
-    <testcase classname="StringDto dto it should validate input to be a number" name="StringDto dto it should validate input to be a number" time="0.204">
+  <testsuite name="StringDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.136" tests="2">
+    <testcase classname="StringDto dto it should validate input to be a number" name="StringDto dto it should validate input to be a number" time="0.146">
     </testcase>
     <testcase classname="StringDto dto it should nullable" name="StringDto dto it should nullable" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="DatetimeDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="4.929" tests="2">
-    <testcase classname="DatetimeDto dto it should validate input to be a date time" name="DatetimeDto dto it should validate input to be a date time" time="0.333">
+  <testsuite name="CurrencyDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.171" tests="2">
+    <testcase classname="CurrencyDto dto it should validate input to be a currency" name="CurrencyDto dto it should validate input to be a currency" time="0.174">
     </testcase>
-    <testcase classname="DatetimeDto dto it should nullable" name="DatetimeDto dto it should nullable" time="0.004">
-    </testcase>
-  </testsuite>
-  <testsuite name="UrlDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="5.225" tests="2">
-    <testcase classname="UrlDto dto it should validate input to be a url" name="UrlDto dto it should validate input to be a url" time="0.407">
-    </testcase>
-    <testcase classname="UrlDto dto it should nullable" name="UrlDto dto it should nullable" time="0.002">
+    <testcase classname="CurrencyDto dto it should nullable" name="CurrencyDto dto it should nullable" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="CurrencyDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:17" time="5.228" tests="2">
-    <testcase classname="CurrencyDto dto it should validate input to be a currency" name="CurrencyDto dto it should validate input to be a currency" time="0.47">
+  <testsuite name="DatetimeDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.183" tests="2">
+    <testcase classname="DatetimeDto dto it should validate input to be a date time" name="DatetimeDto dto it should validate input to be a date time" time="0.15">
     </testcase>
-    <testcase classname="CurrencyDto dto it should nullable" name="CurrencyDto dto it should nullable" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="StringArrayDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:22" time="1.418" tests="2">
-    <testcase classname="StringArrayDto dto it should validate input to be a number" name="StringArrayDto dto it should validate input to be a number" time="0.239">
-    </testcase>
-    <testcase classname="StringArrayDto dto it should nullable" name="StringArrayDto dto it should nullable" time="0.002">
+    <testcase classname="DatetimeDto dto it should nullable" name="DatetimeDto dto it should nullable" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="CuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:22" time="1.273" tests="2">
-    <testcase classname="CuidDto dto it should validate input to be a cuid" name="CuidDto dto it should validate input to be a cuid" time="0.183">
+  <testsuite name="UuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.163" tests="2">
+    <testcase classname="UuidDto dto it should validate input to be a uuid" name="UuidDto dto it should validate input to be a uuid" time="0.147">
     </testcase>
-    <testcase classname="CuidDto dto it should nullable" name="CuidDto dto it should nullable" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="EmailDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:22" time="1.246" tests="2">
-    <testcase classname="EmailDto dto it should validate input to be a email" name="EmailDto dto it should validate input to be a email" time="0.198">
-    </testcase>
-    <testcase classname="EmailDto dto it should nullable" name="EmailDto dto it should nullable" time="0.001">
+    <testcase classname="UuidDto dto it should nullable" name="UuidDto dto it should nullable" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Boolean dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:22" time="1.521" tests="2">
-    <testcase classname="Boolean dto it should validate input to be a boolean" name="Boolean dto it should validate input to be a boolean" time="0.164">
+  <testsuite name="NumberDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.2" tests="2">
+    <testcase classname="NumberDto dto it should validate input to be a number" name="NumberDto dto it should validate input to be a number" time="0.152">
+    </testcase>
+    <testcase classname="NumberDto dto it should nullable" name="NumberDto dto it should nullable" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="UrlDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:36" time="7.3" tests="2">
+    <testcase classname="UrlDto dto it should validate input to be a url" name="UrlDto dto it should validate input to be a url" time="0.241">
+    </testcase>
+    <testcase classname="UrlDto dto it should nullable" name="UrlDto dto it should nullable" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Boolean dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:43" time="0.705" tests="2">
+    <testcase classname="Boolean dto it should validate input to be a boolean" name="Boolean dto it should validate input to be a boolean" time="0.24">
     </testcase>
     <testcase classname="Boolean dto it should nullable" name="Boolean dto it should nullable" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="ImageDto dto" errors="0" failures="0" skipped="0" timestamp="2021-11-11T22:27:22" time="1.156" tests="2">
-    <testcase classname="ImageDto dto it should validate input to be a image object" name="ImageDto dto it should validate input to be a image object" time="0.016">
+  <testsuite name="EmailDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:43" time="0.607" tests="2">
+    <testcase classname="EmailDto dto it should validate input to be a email" name="EmailDto dto it should validate input to be a email" time="0.165">
+    </testcase>
+    <testcase classname="EmailDto dto it should nullable" name="EmailDto dto it should nullable" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ImageDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:43" time="0.651" tests="2">
+    <testcase classname="ImageDto dto it should validate input to be a image object" name="ImageDto dto it should validate input to be a image object" time="0.024">
     </testcase>
     <testcase classname="ImageDto dto it should nullable" name="ImageDto dto it should nullable" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="StringArrayDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:43" time="0.764" tests="2">
+    <testcase classname="StringArrayDto dto it should validate input to be a number" name="StringArrayDto dto it should validate input to be a number" time="0.291">
+    </testcase>
+    <testcase classname="StringArrayDto dto it should nullable" name="StringArrayDto dto it should nullable" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="CuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T13:49:43" time="0.779" tests="2">
+    <testcase classname="CuidDto dto it should validate input to be a cuid" name="CuidDto dto it should validate input to be a cuid" time="0.232">
+    </testcase>
+    <testcase classname="CuidDto dto it should nullable" name="CuidDto dto it should nullable" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

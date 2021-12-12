@@ -5,12 +5,12 @@ ignore: |
     .docker/
     vendor/
     node_modules/
-    .yarn/
-    ub/
     .yarnrc.yml
-    lock.yaml
-    workspace.yaml
-
+    .yarn/
+    .pnpm-lock.yaml
+    .pnpm-workspaces.yaml
+    *lock.yaml
+    *workspace.yaml
 
 rules:
     braces:
