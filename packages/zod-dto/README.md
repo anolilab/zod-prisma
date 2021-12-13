@@ -51,7 +51,7 @@ import { StringDto } from "@anolilab/zod-dto"
 
 const dto = new StringDto("1", true); // the constructor has a zod validator
 
-console.log(dto.value) // { success: false; error: ZodError }
+console.log(dto.value) // return { success: false; error: ZodError }
 ```
 
 You can transform the object to a json with
@@ -61,7 +61,7 @@ dto.toJson() // returns { value: "test string" }
 
 You can get the zod object with
 ```js
-dto.zod() // returns ZodType
+StringDto.zod() // returns ZodType
 ```
 
 ## Example of using @anolilab/zod-dto in Entity dto
@@ -82,7 +82,7 @@ export default abstract class AbstractEntity {
         return JSON.stringify(this.prepareData());
     }
 
-    public toObject<T extends {}>(): T {
+    public toObject<T extends { [key: string]: any }>(): T {
         return this.prepareData();
     }
 
