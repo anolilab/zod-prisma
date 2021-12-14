@@ -1,4 +1,4 @@
-import type { ZodType } from "zod";
+import { ZodType } from "zod";
 
 import { NumberDto, zNumberDto } from "../src";
 
