@@ -1,3 +1,10 @@
+## @anolilab/zod-dto [1.3.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.2.0...@anolilab/zod-dto@1.3.0) (2021-12-14)
+
+
+### Features
+
+* nullable accepts now nullish value ([#22](https://github.com/anolilab/zod-prisma/issues/22)) ([f23a031](https://github.com/anolilab/zod-prisma/commit/f23a0314824af8f5b46c911c71148310a540e446))
+
 ## @anolilab/zod-dto [1.2.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.1.2...@anolilab/zod-dto@1.2.0) (2021-12-12)
 
 
