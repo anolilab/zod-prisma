@@ -1,5 +1,6 @@
-import { DatetimeDto } from "../src";
 import { ZodType } from "zod";
+
+import { DatetimeDto } from "../src";
 
 describe("DatetimeDto dto", () => {
     test("it should validate input to be a date time", () => {
@@ -16,6 +17,8 @@ describe("DatetimeDto dto", () => {
         const date = new Date();
 
         expect(DatetimeDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(DatetimeDto.nullable(undefined)).toBeNull();
         expect(DatetimeDto.nullable(date)?.toJson()).toBe(new DatetimeDto(date).toJson());
     });
 

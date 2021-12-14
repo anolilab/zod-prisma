@@ -16,8 +16,8 @@ export class CuidDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: CuidDtoValue | null) {
-        return value === null ? null : new CuidDto(value);
+    static nullable(value: CuidDtoValue | null | undefined): CuidDto | null {
+        return (value === null || typeof value === "undefined") ? null : new CuidDto(value);
     }
 
     static zod(): ZodString {

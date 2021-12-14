@@ -16,8 +16,8 @@ export class UuidDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: UuidDtoValue | null) {
-        return value === null ? null : new UuidDto(value);
+    static nullable(value: UuidDtoValue | null | undefined): UuidDto | null {
+        return (value === null || typeof value === "undefined") ? null : new UuidDto(value);
     }
 
     static zod(): ZodString {

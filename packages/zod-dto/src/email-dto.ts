@@ -18,8 +18,8 @@ export class EmailDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: EmailDtoValue | null) {
-        return value === null ? null : new EmailDto(value);
+    static nullable(value: EmailDtoValue | null | undefined): EmailDto | null {
+        return (value === null || typeof value === "undefined") ? null : new EmailDto(value);
     }
 
     static zod(): ZodString {

@@ -16,6 +16,8 @@ describe("UuidDto dto", () => {
 
     test("it should nullable", () => {
         expect(UuidDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(UuidDto.nullable(undefined)).toBeNull();
         expect(UuidDto.nullable(uuid)?.toJson()).toBe(new UuidDto(uuid).toJson());
     });
 

@@ -17,6 +17,8 @@ describe("Boolean dto", () => {
 
     test("it should nullable", () => {
         expect(BooleanDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(BooleanDto.nullable(undefined)).toBeNull();
         expect(BooleanDto.nullable(true)).toBeTruthy();
     });
 

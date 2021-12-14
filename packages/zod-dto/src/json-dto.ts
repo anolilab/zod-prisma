@@ -20,8 +20,8 @@ export class JsonDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: JsonDtoValue | null) {
-        return value === null ? null : new JsonDto(value);
+    static nullable(value: JsonDtoValue | null | undefined): JsonDto | null {
+        return (value === null || typeof value === "undefined") ? null : new JsonDto(value);
     }
 
     static zod(): z.ZodSchema<JsonSchema> {

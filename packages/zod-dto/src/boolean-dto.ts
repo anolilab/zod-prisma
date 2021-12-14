@@ -16,8 +16,8 @@ export class BooleanDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: BooleanDtoValue | null) {
-        return value === null ? null : new BooleanDto(value);
+    static nullable(value: BooleanDtoValue | null | undefined): BooleanDto | null {
+        return (value === null || typeof value === "undefined") ? null : new BooleanDto(value);
     }
 
     static zod(): ZodBoolean {

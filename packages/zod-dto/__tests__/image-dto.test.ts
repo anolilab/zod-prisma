@@ -1,5 +1,6 @@
-import { ImageDto } from "../src";
 import { ZodType } from "zod";
+
+import { ImageDto } from "../src";
 
 const image = {
     data: "dsanojksdafvdas4csda56v6a1c9+v4erfv6qsa1c6q",
@@ -23,6 +24,8 @@ describe("ImageDto dto", () => {
 
     test("it should nullable", () => {
         expect(ImageDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(ImageDto.nullable(undefined)).toBeNull();
         expect(ImageDto.nullable(image)?.toJson()).toBe(new ImageDto(image).toJson());
     });
 

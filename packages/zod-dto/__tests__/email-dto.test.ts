@@ -15,6 +15,7 @@ describe("EmailDto dto", () => {
 
     test("it should nullable", () => {
         expect(EmailDto.nullable(null)).toBeNull();
+        expect(EmailDto.nullable()).toBeNull();
         expect(EmailDto.nullable(email)?.toJson()).toBe(new EmailDto(email).toJson());
     });
 

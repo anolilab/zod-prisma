@@ -16,8 +16,8 @@ export class StringArrayDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: StringArrayDtoValue | null) {
-        return value === null ? null : new StringArrayDto(value);
+    static nullable(value: StringArrayDtoValue | null | undefined): StringArrayDto | null {
+        return (value === null || typeof value === "undefined") ? null : new StringArrayDto(value);
     }
 
     static zod(): ZodArray<ZodTypeAny> {
