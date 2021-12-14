@@ -34,8 +34,8 @@ export class ImageDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: ImageDtoValue | null) {
-        return value === null ? null : new ImageDto(value);
+    static nullable(value: ImageDtoValue | null | undefined): ImageDto | null {
+        return (value === null || typeof value === "undefined") ? null : new ImageDto(value);
     }
 
     static zod(): ZodObject<ZodRawShape> {

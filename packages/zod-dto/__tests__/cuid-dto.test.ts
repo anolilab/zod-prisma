@@ -1,5 +1,6 @@
-import { CuidDto } from "../src";
 import { ZodType } from "zod";
+
+import { CuidDto } from "../src";
 
 const cuid = "ckopqwooh000001la8mbi2im9";
 
@@ -15,6 +16,8 @@ describe("CuidDto dto", () => {
 
     test("it should be nullable", () => {
         expect(CuidDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(CuidDto.nullable(undefined)).toBeNull();
         expect(CuidDto.nullable(cuid)?.toJson()).toBe(new CuidDto(cuid).toJson());
     });
 

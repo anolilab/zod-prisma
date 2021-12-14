@@ -16,8 +16,8 @@ export class CurrencyDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: CurrencyDtoValue | null) {
-        return value === null ? null : new CurrencyDto(value);
+    static nullable(value: CurrencyDtoValue | null | undefined): CurrencyDto | null {
+        return (value === null || typeof value === "undefined") ? null : new CurrencyDto(value);
     }
 
     static zod(): ZodString {

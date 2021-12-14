@@ -14,6 +14,8 @@ describe("CurrencyDto dto", () => {
 
     test("it should nullable", () => {
         expect(CurrencyDto.nullable(null)).toBeNull();
+        // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
+        expect(CurrencyDto.nullable(undefined)).toBeNull();
         expect(CurrencyDto.nullable("EUR")?.toJson()).toBe(new CurrencyDto("EUR").toJson());
     });
 

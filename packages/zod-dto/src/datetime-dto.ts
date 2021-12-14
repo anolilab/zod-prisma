@@ -16,8 +16,8 @@ export class DatetimeDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: DatetimeDtoValue | null) {
-        return value === null ? null : new DatetimeDto(value);
+    static nullable(value: DatetimeDtoValue | null | undefined): DatetimeDto | null {
+        return (value === null || typeof value === "undefined") ? null : new DatetimeDto(value);
     }
 
     static zod(): ZodDate {

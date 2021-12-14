@@ -1,5 +1,6 @@
-import { JsonDto } from "../src";
 import { ZodType } from "zod";
+
+import { JsonDto } from "../src";
 
 const json = {
     string: "test",
@@ -23,6 +24,7 @@ describe("JsonDto dto", () => {
 
     test("it should nullable", () => {
         expect(JsonDto.nullable(null)).toBeNull();
+        expect(JsonDto.nullable()).toBeNull();
         expect(JsonDto.nullable(json)?.toJson()).toBe(new JsonDto(json).toJson());
     });
 

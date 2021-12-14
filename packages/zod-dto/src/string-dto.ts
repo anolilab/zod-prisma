@@ -16,8 +16,8 @@ export class StringDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: StringDtoValue | null) {
-        return value === null ? null : new StringDto(value);
+    static nullable(value: StringDtoValue | null | undefined): StringDto | null {
+        return (value === null || typeof value === "undefined") ? null : new StringDto(value);
     }
 
     static zod(): ZodString {

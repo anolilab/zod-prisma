@@ -16,8 +16,8 @@ export class UrlDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: UrlDtoValue | null) {
-        return value === null ? null : new UrlDto(value);
+    static nullable(value: UrlDtoValue | null | undefined): UrlDto | null {
+        return (value === null || typeof value === "undefined") ? null : new UrlDto(value);
     }
 
     static zod(): ZodString {

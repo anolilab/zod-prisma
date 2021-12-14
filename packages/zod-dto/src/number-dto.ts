@@ -16,8 +16,8 @@ export class NumberDto extends AbstractDto {
         Object.freeze(this);
     }
 
-    static nullable(value: NumberDtoValue | null) {
-        return value === null ? null : new NumberDto(value);
+    static nullable(value: NumberDtoValue | null | undefined): NumberDto | null {
+        return (value === null || typeof value === "undefined") ? null : new NumberDto(value);
     }
 
     static zod(): ZodNumber {
