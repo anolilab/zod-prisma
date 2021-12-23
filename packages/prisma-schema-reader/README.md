@@ -1,4 +1,4 @@
-# DTO’s (Data Transfer Object) based on [zod](https://github.com/colinhacks/zod)
+# A prisma schema reader and object transformation
 
 ---
 
