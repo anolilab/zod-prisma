@@ -8,7 +8,7 @@ importers:
       '@anolilab/eslint-config': ^2.2.0
       '@anolilab/prettier-config': ^2.0.4
       '@anolilab/semantic-release-preset': ^1.1.0
-      '@anolilab/textlint-config': ^2.0.9
+      '@anolilab/textlint-config': ^3.0.0
       '@babel/cli': ^7.16.0
       '@babel/core': ^7.16.0
       '@babel/eslint-parser': ^7.16.3
@@ -58,7 +58,7 @@ importers:
       '@anolilab/eslint-config': 2.2.0_32f614832267ec7c343412d5b18e4ef8
       '@anolilab/prettier-config': 2.0.4_prettier@2.5.1
       '@anolilab/semantic-release-preset': 1.1.0_semantic-release@18.0.1
-      '@anolilab/textlint-config': 2.0.9
+      '@anolilab/textlint-config': 3.0.0_textlint@12.1.0
       '@babel/cli': 7.16.0_@babel+core@7.16.0
       '@babel/core': 7.16.0
       '@babel/eslint-parser': 7.16.3_@babel+core@7.16.0+eslint@7.32.0
@@ -257,10 +257,12 @@ packages:
       - supports-color
     dev: false
 
-  /@anolilab/textlint-config/2.0.9:
-    resolution: {integrity: sha512-VLjbY1MDnbNHv5Y/Ta/liuPr7KRi7pB8/dPEV4n+MKNgpOnZzIpehPgJmmCfbJBJfLPagwEH7kvh/baDwFet/w==}
+  /@anolilab/textlint-config/3.0.0_textlint@12.1.0:
+    resolution: {integrity: sha512-QGY0YWHKctmy/jkkJ04g8mgouTDHHiDsZWAr96on3zL54Tyb+NSairdi/HoyXbDIMNBvJSdp4sz2/5gIpgqYTw==}
     engines: {node: '>=12'}
     requiresBuild: true
+    peerDependencies:
+      textlint: ^12.1.0
     dependencies:
       '@textlint-rule/textlint-rule-no-invalid-control-character': 2.0.0
       '@textlint-rule/textlint-rule-no-unmatched-pair': 1.0.8
@@ -2624,7 +2626,7 @@ packages:
       conventional-changelog-angular: 5.0.13
       conventional-commits-filter: 2.0.7
       conventional-commits-parser: 3.2.3
-      debug: 4.3.2
+      debug: 4.3.3
       import-from: 4.0.0
       lodash: 4.17.21
       micromatch: 4.0.4
@@ -2642,7 +2644,7 @@ packages:
       conventional-changelog-angular: 5.0.13
       conventional-commits-filter: 2.0.7
       conventional-commits-parser: 3.2.3
-      debug: 4.3.2
+      debug: 4.3.3
       import-from: 4.0.0
       lodash: 4.17.21
       micromatch: 4.0.4
@@ -2668,7 +2670,7 @@ packages:
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      debug: 4.3.2
+      debug: 4.3.3
       execa: 5.1.1
       lodash: 4.17.21
       parse-json: 5.2.0
@@ -2685,7 +2687,7 @@ packages:
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      debug: 4.3.2
+      debug: 4.3.3
       dir-glob: 3.0.1
       execa: 5.1.1
       lodash: 4.17.21
@@ -2733,7 +2735,7 @@ packages:
       '@semantic-release/error': 2.2.0
       aggregate-error: 3.1.0
       bottleneck: 2.19.5
-      debug: 4.3.2
+      debug: 4.3.3
       dir-glob: 3.0.1
       fs-extra: 10.0.0
       globby: 11.0.4
@@ -2804,7 +2806,7 @@ packages:
       conventional-changelog-writer: 5.0.0
       conventional-commits-filter: 2.0.7
       conventional-commits-parser: 3.2.3
-      debug: 4.3.2
+      debug: 4.3.3
       get-stream: 6.0.1
       import-from: 4.0.0
       into-stream: 6.0.0
