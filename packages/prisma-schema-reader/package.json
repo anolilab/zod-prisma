@@ -1,7 +1,7 @@
 {
     "name": "@anolilab/prisma-schema-reader",
     "version": "1.0.0",
-    "description": "",
+    "description": "A prisma.schema reader and schema to object transformation class.",
     "keywords": [
         "anolilab",
         "prisma",
@@ -14,6 +14,16 @@
         "url": "https://github.com/anolilab/zod-prisma.git",
         "directory": "packages/prisma-schema-reader"
     },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
     "license": "MIT",
     "author": {
         "name": "Daniel Bannert",
@@ -26,16 +36,6 @@
             "default": "./dist/anolilab-prisma-schema-reader.esm.js"
         }
     },
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/prisis"
-        },
-        {
-            "type": "consulting",
-            "url": "https://anolilab.com/support"
-        }
-    ],
     "main": "dist/anolilab-prisma-schema-reader.cjs.js",
     "module": "dist/anolilab-prisma-schema-reader.esm.js",
     "types": "dist/anolilab-prisma-schema-reader.cjs.d.ts",
