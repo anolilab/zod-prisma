@@ -1,0 +1,62 @@
+{
+    "name": "@anolilab/prisma-schema-reader",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [
+        "anolilab",
+        "prisma",
+        "reader",
+        "schema"
+    ],
+    "homepage": "https://anolilab.com/nodejs/packages/anolilab/prisma-schema-reader",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/zod-prisma.git",
+        "directory": "packages/prisma-schema-reader"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "require": "./dist/anolilab-prisma-schema-reader.cjs.js",
+            "default": "./dist/anolilab-prisma-schema-reader.esm.js"
+        }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
+    "main": "dist/anolilab-prisma-schema-reader.cjs.js",
+    "module": "dist/anolilab-prisma-schema-reader.esm.js",
+    "types": "dist/anolilab-prisma-schema-reader.cjs.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "devDependencies": {
+        "typescript": "^4.4.3"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "preconstruct": {
+        "entrypoints": [
+            "index.ts"
+        ]
+    }
+}

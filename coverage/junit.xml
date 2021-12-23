@@ -1,99 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="36" failures="0" errors="0" time="9.986">
-  <testsuite name="NumberDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="4.288" tests="3">
-    <testcase classname="NumberDto dto it should validate input to be a number" name="NumberDto dto it should validate input to be a number" time="0.202">
+<testsuites name="jest tests" tests="37" failures="0" errors="0" time="4.588">
+  <testsuite name="CurrencyDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.211" tests="3">
+    <testcase classname="CurrencyDto dto it should validate input to be a currency" name="CurrencyDto dto it should validate input to be a currency" time="0.118">
     </testcase>
-    <testcase classname="NumberDto dto it should nullable" name="NumberDto dto it should nullable" time="0.002">
+    <testcase classname="CurrencyDto dto it should nullable" name="CurrencyDto dto it should nullable" time="0.001">
     </testcase>
-    <testcase classname="NumberDto dto it should return a zod type" name="NumberDto dto it should return a zod type" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="CurrencyDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="4.979" tests="3">
-    <testcase classname="CurrencyDto dto it should validate input to be a currency" name="CurrencyDto dto it should validate input to be a currency" time="0.283">
-    </testcase>
-    <testcase classname="CurrencyDto dto it should nullable" name="CurrencyDto dto it should nullable" time="0.002">
-    </testcase>
-    <testcase classname="CurrencyDto dto it should return a zod type" name="CurrencyDto dto it should return a zod type" time="0.002">
+    <testcase classname="CurrencyDto dto it should return a zod type" name="CurrencyDto dto it should return a zod type" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="StringArrayDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="5.159" tests="3">
-    <testcase classname="StringArrayDto dto it should validate input to be a number" name="StringArrayDto dto it should validate input to be a number" time="0.265">
+  <testsuite name="DatetimeDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.218" tests="3">
+    <testcase classname="DatetimeDto dto it should validate input to be a date time" name="DatetimeDto dto it should validate input to be a date time" time="0.086">
+    </testcase>
+    <testcase classname="DatetimeDto dto it should nullable" name="DatetimeDto dto it should nullable" time="0.002">
+    </testcase>
+    <testcase classname="DatetimeDto dto it should return a zod type" name="DatetimeDto dto it should return a zod type" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="StringArrayDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.246" tests="3">
+    <testcase classname="StringArrayDto dto it should validate input to be a number" name="StringArrayDto dto it should validate input to be a number" time="0.116">
     </testcase>
     <testcase classname="StringArrayDto dto it should nullable" name="StringArrayDto dto it should nullable" time="0.002">
     </testcase>
-    <testcase classname="StringArrayDto dto it should return a zod type" name="StringArrayDto dto it should return a zod type" time="0.003">
+    <testcase classname="StringArrayDto dto it should return a zod type" name="StringArrayDto dto it should return a zod type" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="UrlDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="5.216" tests="3">
-    <testcase classname="UrlDto dto it should validate input to be a url" name="UrlDto dto it should validate input to be a url" time="0.533">
+  <testsuite name="ImageDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.236" tests="3">
+    <testcase classname="ImageDto dto it should validate input to be a image object" name="ImageDto dto it should validate input to be a image object" time="0.023">
     </testcase>
-    <testcase classname="UrlDto dto it should nullable" name="UrlDto dto it should nullable" time="0.001">
-    </testcase>
-    <testcase classname="UrlDto dto it should return a zod type" name="UrlDto dto it should return a zod type" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="ImageDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="5.332" tests="3">
-    <testcase classname="ImageDto dto it should validate input to be a image object" name="ImageDto dto it should validate input to be a image object" time="0.038">
-    </testcase>
-    <testcase classname="ImageDto dto it should nullable" name="ImageDto dto it should nullable" time="0.004">
+    <testcase classname="ImageDto dto it should nullable" name="ImageDto dto it should nullable" time="0.002">
     </testcase>
     <testcase classname="ImageDto dto it should return a zod type" name="ImageDto dto it should return a zod type" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="DatetimeDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:20" time="5.435" tests="3">
-    <testcase classname="DatetimeDto dto it should validate input to be a date time" name="DatetimeDto dto it should validate input to be a date time" time="0.192">
+  <testsuite name="StringDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.27" tests="3">
+    <testcase classname="StringDto dto it should validate input to be a number" name="StringDto dto it should validate input to be a number" time="0.12">
     </testcase>
-    <testcase classname="DatetimeDto dto it should nullable" name="DatetimeDto dto it should nullable" time="0.003">
+    <testcase classname="StringDto dto it should nullable" name="StringDto dto it should nullable" time="0.002">
     </testcase>
-    <testcase classname="DatetimeDto dto it should return a zod type" name="DatetimeDto dto it should return a zod type" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="StringDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:21" time="5.557" tests="3">
-    <testcase classname="StringDto dto it should validate input to be a number" name="StringDto dto it should validate input to be a number" time="0.207">
-    </testcase>
-    <testcase classname="StringDto dto it should nullable" name="StringDto dto it should nullable" time="0.001">
-    </testcase>
-    <testcase classname="StringDto dto it should return a zod type" name="StringDto dto it should return a zod type" time="0.002">
+    <testcase classname="StringDto dto it should return a zod type" name="StringDto dto it should return a zod type" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="EmailDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:25" time="1.485" tests="3">
-    <testcase classname="EmailDto dto it should validate input to be a email" name="EmailDto dto it should validate input to be a email" time="0.409">
+  <testsuite name="NumberDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.27" tests="3">
+    <testcase classname="NumberDto dto it should validate input to be a number" name="NumberDto dto it should validate input to be a number" time="0.124">
     </testcase>
-    <testcase classname="EmailDto dto it should nullable" name="EmailDto dto it should nullable" time="0.002">
+    <testcase classname="NumberDto dto it should nullable" name="NumberDto dto it should nullable" time="0.002">
     </testcase>
-    <testcase classname="EmailDto dto it should return a zod type" name="EmailDto dto it should return a zod type" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="UuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:25" time="1.27" tests="3">
-    <testcase classname="UuidDto dto it should validate input to be a uuid" name="UuidDto dto it should validate input to be a uuid" time="0.194">
-    </testcase>
-    <testcase classname="UuidDto dto it should nullable" name="UuidDto dto it should nullable" time="0.001">
-    </testcase>
-    <testcase classname="UuidDto dto it should return a zod type" name="UuidDto dto it should return a zod type" time="0.001">
+    <testcase classname="NumberDto dto it should return a zod type" name="NumberDto dto it should return a zod type" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="JsonDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:26" time="0.884" tests="3">
-    <testcase classname="JsonDto dto it should validate input to be a json" name="JsonDto dto it should validate input to be a json" time="0.007">
+  <testsuite name="UrlDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:34" time="2.411" tests="3">
+    <testcase classname="UrlDto dto it should validate input to be a url" name="UrlDto dto it should validate input to be a url" time="0.206">
     </testcase>
-    <testcase classname="JsonDto dto it should nullable" name="JsonDto dto it should nullable" time="0.005">
+    <testcase classname="UrlDto dto it should nullable" name="UrlDto dto it should nullable" time="0.001">
+    </testcase>
+    <testcase classname="UrlDto dto it should return a zod type" name="UrlDto dto it should return a zod type" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="JsonDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="0.431" tests="3">
+    <testcase classname="JsonDto dto it should validate input to be a json" name="JsonDto dto it should validate input to be a json" time="0.006">
+    </testcase>
+    <testcase classname="JsonDto dto it should nullable" name="JsonDto dto it should nullable" time="0.003">
     </testcase>
     <testcase classname="JsonDto dto it should return a zod type" name="JsonDto dto it should return a zod type" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Boolean dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:26" time="3.245" tests="3">
-    <testcase classname="Boolean dto it should validate input to be a boolean" name="Boolean dto it should validate input to be a boolean" time="0.139">
+  <testsuite name="Boolean dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="0.514" tests="3">
+    <testcase classname="Boolean dto it should validate input to be a boolean" name="Boolean dto it should validate input to be a boolean" time="0.085">
     </testcase>
     <testcase classname="Boolean dto it should nullable" name="Boolean dto it should nullable" time="0.001">
     </testcase>
-    <testcase classname="Boolean dto it should return a zod type" name="Boolean dto it should return a zod type" time="0.001">
+    <testcase classname="Boolean dto it should return a zod type" name="Boolean dto it should return a zod type" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="CuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-12T21:46:26" time="3.483" tests="3">
-    <testcase classname="CuidDto dto it should validate input to be a cuid" name="CuidDto dto it should validate input to be a cuid" time="0.158">
+  <testsuite name="EmailDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="0.589" tests="3">
+    <testcase classname="EmailDto dto it should validate input to be a email" name="EmailDto dto it should validate input to be a email" time="0.102">
+    </testcase>
+    <testcase classname="EmailDto dto it should nullable" name="EmailDto dto it should nullable" time="0.002">
+    </testcase>
+    <testcase classname="EmailDto dto it should return a zod type" name="EmailDto dto it should return a zod type" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="CuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="0.573" tests="3">
+    <testcase classname="CuidDto dto it should validate input to be a cuid" name="CuidDto dto it should validate input to be a cuid" time="0.11">
     </testcase>
     <testcase classname="CuidDto dto it should be nullable" name="CuidDto dto it should be nullable" time="0.002">
     </testcase>
-    <testcase classname="CuidDto dto it should return a zod type" name="CuidDto dto it should return a zod type" time="0.001">
+    <testcase classname="CuidDto dto it should return a zod type" name="CuidDto dto it should return a zod type" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="UuidDto dto" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="0.626" tests="3">
+    <testcase classname="UuidDto dto it should validate input to be a uuid" name="UuidDto dto it should validate input to be a uuid" time="0.118">
+    </testcase>
+    <testcase classname="UuidDto dto it should nullable" name="UuidDto dto it should nullable" time="0">
+    </testcase>
+    <testcase classname="UuidDto dto it should return a zod type" name="UuidDto dto it should return a zod type" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="schema-to-object" errors="0" failures="0" skipped="0" timestamp="2021-12-23T13:58:37" time="1.828" tests="1">
+    <testcase classname="schema-to-object it should transform prisma.schema to objects" name="schema-to-object it should transform prisma.schema to objects" time="0.006">
     </testcase>
   </testsuite>
 </testsuites>
