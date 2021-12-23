@@ -1,17 +1,19 @@
 {
-    "name": "@anolilab/zod-dto",
-    "version": "1.3.0",
+    "name": "@anolilab/prisma-middleware",
+    "version": "0.0.0",
     "description": "",
     "keywords": [
         "anolilab",
-        "zod",
-        "dto"
+        "prisma",
+        "middleware",
+        "soft-delete",
+        "delete"
     ],
-    "homepage": "https://anolilab.com/nodejs/packages/anolilab/zod-dto",
+    "homepage": "https://anolilab.com/nodejs/packages/anolilab/prisma-middleware",
     "repository": {
         "type": "git",
         "url": "https://github.com/anolilab/zod-prisma.git",
-        "directory": "packages/zod-dto"
+        "directory": "packages/prisma-middleware"
     },
     "funding": [
         {
@@ -31,25 +33,28 @@
     "sideEffects": false,
     "exports": {
         ".": {
-            "require": "./dist/anolilab-zod-dto.cjs.js",
-            "default": "./dist/anolilab-zod-dto.esm.js"
+            "require": "./dist/anolilab-prisma-middleware.cjs.js",
+            "default": "./dist/anolilab-prisma-middleware.esm.js"
         }
     },
-    "main": "dist/anolilab-zod-dto.cjs.js",
-    "module": "dist/anolilab-zod-dto.esm.js",
-    "types": "dist/anolilab-zod-dto.cjs.d.ts",
+    "main": "dist/anolilab-prisma-middleware.cjs.js",
+    "module": "dist/anolilab-prisma-middleware.esm.js",
+    "types": "dist/anolilab-prisma-middleware.cjs.d.ts",
     "files": [
         "dist",
         "README.md",
         "CHANGELOG.md",
         "LICENSE.md"
     ],
-    "devDependencies": {
-        "typescript": "^4.4.3",
-        "zod": "^3.8.2"
+    "scripts": {
+        "prepare:db": "pnpm prisma db push"
     },
-    "peerDependencies": {
-        "zod": "^3.8.2"
+    "dependencies": {
+        "@prisma/client": "3.7.0"
+    },
+    "devDependencies": {
+        "prisma": "^3.7.0",
+        "typescript": "^4.4.3"
     },
     "engines": {
         "node": ">=12"
