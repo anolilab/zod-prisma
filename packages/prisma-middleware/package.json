@@ -1,0 +1,70 @@
+{
+    "name": "@anolilab/prisma-middleware",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [
+        "anolilab",
+        "prisma",
+        "middleware",
+        "soft-delete",
+        "delete"
+    ],
+    "homepage": "https://anolilab.com/nodejs/packages/anolilab/prisma-middleware",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/zod-prisma.git",
+        "directory": "packages/prisma-middleware"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Daniel Bannert",
+        "email": "d.bannert@anolilab.de"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "require": "./dist/anolilab-prisma-middleware.cjs.js",
+            "default": "./dist/anolilab-prisma-middleware.esm.js"
+        }
+    },
+    "main": "dist/anolilab-prisma-middleware.cjs.js",
+    "module": "dist/anolilab-prisma-middleware.esm.js",
+    "types": "dist/anolilab-prisma-middleware.cjs.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+    ],
+    "scripts": {
+        "prepare:db": "pnpm prisma db push"
+    },
+    "dependencies": {
+        "@prisma/client": "3.7.0"
+    },
+    "devDependencies": {
+        "prisma": "^3.7.0",
+        "typescript": "^4.4.3"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "preconstruct": {
+        "entrypoints": [
+            "index.ts"
+        ]
+    }
+}
