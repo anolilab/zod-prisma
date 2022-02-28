@@ -46,6 +46,7 @@ importers:
       lint-staged: ^12.1.3
       plop: ^3.0.5
       prettier: ^2.5.1
+      prettier-plugin-prisma: ^3.7.0
       semantic-release: ^19.0.0
       snapshot-diff: ^0.9.0
       sort-package-json: ^1.53.1
@@ -96,12 +97,24 @@ importers:
       lint-staged: 12.1.3
       plop: 3.0.5
       prettier: 2.5.1
+      prettier-plugin-prisma: 3.10.0_prettier@2.5.1
       semantic-release: 19.0.2
       snapshot-diff: 0.9.0_jest@27.4.5
       sort-package-json: 1.53.1
       textlint: 12.1.0
       ts-jest: 27.1.2_dee0b726dbd276697ee4962bafb31db0
       ts-node: 10.4.0_d0eef7d48f2063e87802f700404a1b3b
+      typescript: 4.5.4
+
+  packages/prisma-middleware:
+    specifiers:
+      '@prisma/client': 3.7.0
+      prisma: ^3.7.0
+      typescript: ^4.4.3
+    dependencies:
+      '@prisma/client': 3.7.0_prisma@3.10.0
+    devDependencies:
+      prisma: 3.10.0
       typescript: 4.5.4
 
   packages/prisma-schema-reader:
@@ -2687,6 +2700,33 @@ packages:
       source-map-support: 0.5.20
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@prisma/client/3.7.0_prisma@3.10.0:
+    resolution: {integrity: sha512-fUJMvBOX5C7JPc0e3CJD6Gbelbu4dMJB4ScYpiht8HMUnRShw20ULOipTopjNtl6ekHQJ4muI7pXlQxWS9nMbw==}
+    engines: {node: '>=12.6'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 3.7.0-31.8746e055198f517658c08a0c426c7eec87f5a85f
+      prisma: 3.10.0
+    dev: false
+
+  /@prisma/engines-version/3.7.0-31.8746e055198f517658c08a0c426c7eec87f5a85f:
+    resolution: {integrity: sha512-+qx2b+HK7BKF4VCa0LZ/t1QCXsu6SmvhUQyJkOD2aPpmOzket4fEnSKQZSB0i5tl7rwCDsvAiSeK8o7rf+yvwg==}
+    dev: false
+
+  /@prisma/engines/3.10.0-50.73e60b76d394f8d37d8ebd1f8918c79029f0db86:
+    resolution: {integrity: sha512-LjRssaWu9w2SrXitofnutRIyURI7l0veQYIALz7uY4shygM9nMcK3omXcObRm7TAcw3Z+9ytfK1B+ySOsOesxQ==}
+    requiresBuild: true
+    dev: true
+
+  /@prisma/prisma-fmt-wasm/3.10.0-50.73e60b76d394f8d37d8ebd1f8918c79029f0db86:
+    resolution: {integrity: sha512-f0Srf2EasvBRKBlTUrqkW5hp889+SRrRkqu0MgcuTXlgHxVMj7DIo1JNylPb1y/HDwtjLWf6AL+sk+2R891SWA==}
     dev: false
 
   /@qiwi/multi-semantic-release/3.17.0:
@@ -10970,6 +11010,16 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /prettier-plugin-prisma/3.10.0_prettier@2.5.1:
+    resolution: {integrity: sha512-NIbpqcwyB70fAWqFlOmmhaa9DhGAnZ8uWVyc0cS7EaOR7TH5yjnw6WV5HPjWdVmh6m84W8dwMRzGzLTW/S4Kmw==}
+    engines: {node: '>=12', npm: '>=7'}
+    peerDependencies:
+      prettier: '>=2'
+    dependencies:
+      '@prisma/prisma-fmt-wasm': 3.10.0-50.73e60b76d394f8d37d8ebd1f8918c79029f0db86
+      prettier: 2.5.1
+    dev: false
+
   /prettier/2.5.1:
     resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
     engines: {node: '>=10.13.0'}
@@ -11005,6 +11055,15 @@ packages:
       ansi-styles: 5.2.0
       react-is: 17.0.2
     dev: false
+
+  /prisma/3.10.0:
+    resolution: {integrity: sha512-dAld12vtwdz9Rz01nOjmnXe+vHana5PSog8t0XGgLemKsUVsaupYpr74AHaS3s78SaTS5s2HOghnJF+jn91ZrA==}
+    engines: {node: '>=12.6'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 3.10.0-50.73e60b76d394f8d37d8ebd1f8918c79029f0db86
+    dev: true
 
   /process-nextick-args/1.0.7:
     resolution: {integrity: sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=}
@@ -13090,7 +13149,6 @@ packages:
     resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
 
   /uglify-js/3.14.3:
     resolution: {integrity: sha512-mic3aOdiq01DuSVx0TseaEzMIVqebMZ0Z3vaeDhFEh9bsc24hV1TFvN74reA2vs08D0ZWfNjAcJ3UbVLaBss+g==}

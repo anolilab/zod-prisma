@@ -20,8 +20,8 @@ export const findMiddleware: PrismaMiddleware = async (parameters, next) => {
             if (typeof argument[1] !== "object") {
                 parameters.args.where[argument[0]] = argument[1];
             } else {
-                Object.entries(argument[1] as Record<string, unknown>).forEach((subarg) => {
-                    parameters.args.where[subarg[0]] = subarg[1];
+                Object.entries(argument[1] as Record<string, unknown>).forEach((subArg) => {
+                    parameters.args.where[subArg[0]] = subArg[1];
                 });
             }
         });
