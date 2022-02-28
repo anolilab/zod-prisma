@@ -37,7 +37,7 @@
     ],
     "dependencies": {
         "@anolilab/babel-preset": "^3.2.0",
-        "@anolilab/eslint-config": "^2.2.0",
+        "@anolilab/eslint-config": "^3.0.0",
         "@anolilab/prettier-config": "^2.0.4",
         "@anolilab/semantic-release-preset": "^1.2.0",
         "@anolilab/textlint-config": "^3.0.0",
