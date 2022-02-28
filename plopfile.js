@@ -21,6 +21,7 @@ module.exports = function (
                 type: "input",
                 name: "export_name",
                 message: "What is your package export name? Its based on your package name: test-package-name",
+                // eslint-disable-next-line radar/no-identical-functions
                 validate: (value) => {
                     if (/.+/.test(value)) {
                         return true;
@@ -78,45 +79,45 @@ module.exports = function (
                 },
             },
         ],
-        actions: (data) => [
+        actions: () => [
             {
                 type: "add",
-                path: "src/packages/{{name}}/.npmignore",
-                templateFile: "plop-templates/packages/src/.npmignore.hbs",
+                path: "packages/{{directory}}/.npmignore",
+                templateFile: "plop-templates/package/.npmignore.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/.releaserc.json",
-                templateFile: "plop-templates/packages/src/.releaserc.json.hbs",
+                path: "packages/{{directory}}/.releaserc.json",
+                templateFile: "plop-templates/package/.releaserc.json.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/src/.gitkeep",
+                path: "packages/{{directory}}/.gitkeep",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/babel.config.cjs",
-                templateFile: "plop-templates/packages/config/babel.config.cjs.hbs",
+                path: "packages/{{directory}}/babel.config.cjs",
+                templateFile: "plop-templates/package/babel.config.cjs.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/LICENSE.md",
-                templateFile: "plop-templates/packages/config/LICENSE.md.hbs",
+                path: "packages/{{directory}}/LICENSE.md",
+                templateFile: "plop-templates/package/LICENSE.md.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/package.json",
-                templateFile: "plop-templates/packages/config/package.json.hbs",
+                path: "packages/{{directory}}/package.json",
+                templateFile: "plop-templates/package/package.json.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/README.md",
-                templateFile: "plop-templates/packages/config/README.md.hbs",
+                path: "packages/{{directory}}/README.md",
+                templateFile: "plop-templates/package/README.md.hbs",
             },
             {
                 type: "add",
-                path: "src/packages/{{name}}/tsconfig.json",
-                templateFile: "plop-templates/packages/config/tsconfig.json.hbs",
+                path: "packages/{{directory}}/tsconfig.json",
+                templateFile: "plop-templates/package/tsconfig.json.hbs",
             },
         ],
     });

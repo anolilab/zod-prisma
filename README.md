@@ -26,6 +26,7 @@
 ## Packages
 
 [@anolilab/zod-dto](./packages/zod-dto) - package with  base zod dto’s
+[@anolilab/prisma-schema-reader](./packages/prisma-schema-reader) - A prisma.schema reader and schema to object transformation class.
 
 ## Versioning
 
