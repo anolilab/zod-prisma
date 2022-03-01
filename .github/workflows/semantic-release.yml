@@ -39,7 +39,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Use Node.js 16.x"
-              uses: "actions/setup-node@v2"
+              uses: actions/setup-node@v3
               with:
                   node-version: "16.x"
                   # Enable this to use the github packages
@@ -101,7 +101,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Use Node.js 16.x"
-              uses: "actions/setup-node@v2"
+              uses: actions/setup-node@v3
               with:
                   node-version: "16.x"
                   # Enable this to use the github packages
