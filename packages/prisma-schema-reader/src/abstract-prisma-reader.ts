@@ -1,4 +1,5 @@
-import { existsSync, readFileSync } from "node:fs";
+// eslint-disable-next-line unicorn/prefer-node-protocol
+import { existsSync, readFileSync } from "fs";
 
 import type { Field } from "./types";
 

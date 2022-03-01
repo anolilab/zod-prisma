@@ -65,6 +65,9 @@ jobs:
             - name: "Build packages"
               run: "pnpm build"
 
+            - name: "ESLint"
+              run: "pnpm run lint"
+
             - name: "Test packages"
               run: "pnpm test"
 
