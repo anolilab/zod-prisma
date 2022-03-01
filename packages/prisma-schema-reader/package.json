@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/prisma-schema-reader",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "A prisma.schema reader and schema to object transformation class.",
     "keywords": [
         "anolilab",

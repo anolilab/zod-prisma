@@ -1,3 +1,14 @@
+## @anolilab/prisma-schema-reader [2.0.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/prisma-schema-reader@1.0.0...@anolilab/prisma-schema-reader@2.0.0) (2022-03-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Changed minimum version of node to v16
+
+### Bug Fixes
+
+* fixed found eslint error ([e6f3ed4](https://github.com/anolilab/zod-prisma/commit/e6f3ed4574a5a07adc136ce4cb2484f218e70739))
+
 ## @anolilab/prisma-schema-reader 1.0.0 (2021-12-23)
 
 
