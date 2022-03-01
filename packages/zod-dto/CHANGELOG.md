@@ -1,3 +1,14 @@
+## @anolilab/zod-dto [2.0.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.3.0...@anolilab/zod-dto@2.0.0) (2022-03-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Changed minimum version of node to v16
+
+### Bug Fixes
+
+* fixed found eslint error ([e6f3ed4](https://github.com/anolilab/zod-prisma/commit/e6f3ed4574a5a07adc136ce4cb2484f218e70739))
+
 ## @anolilab/zod-dto [1.3.0](https://github.com/anolilab/zod-prisma/compare/@anolilab/zod-dto@1.2.0...@anolilab/zod-dto@1.3.0) (2021-12-14)
 
 
