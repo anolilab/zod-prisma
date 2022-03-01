@@ -1,11 +1,15 @@
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readFileSync } from "node:fs";
 
 import type { Field } from "./types";
 
 abstract class AbstractPrismaReader {
+    protected path: string;
+
     protected data: string;
 
-    protected constructor(protected path: string) {
+    public constructor(path: string) {
+        this.path = path;
+
         this.checkIfSchemaExit();
 
         this.data = readFileSync(path, { encoding: "utf-8" });

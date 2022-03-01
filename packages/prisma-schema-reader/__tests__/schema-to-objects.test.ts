@@ -1,8 +1,8 @@
-import path from "path";
+import path from "node:path";
 
 import { SchemaToObjectTransformer } from "../src";
-
-const prismaSchemaPath = path.resolve("./packages/prisma-schema-reader/__tests__/fixtures/schema.prisma");
+// eslint-disable-next-line unicorn/prefer-module
+const prismaSchemaPath = path.resolve(__dirname, "fixtures/schema.prisma");
 
 describe("schema-to-object", () => {
     test("it should transform prisma.schema to objects", () => {

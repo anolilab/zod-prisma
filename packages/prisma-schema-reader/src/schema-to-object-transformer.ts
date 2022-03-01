@@ -9,10 +9,6 @@ class SchemaToObjectTransformer extends AbstractPrismaReader {
         enums: [],
     };
 
-    constructor(protected path: string) {
-        super(path);
-    }
-
     public transform(): SchemaObject {
         this.getModels();
         this.getEnums();

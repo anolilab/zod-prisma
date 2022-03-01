@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prefer-module,func-names
 module.exports = function (
     /** @type {import('plop').NodePlopAPI} */
     plop,

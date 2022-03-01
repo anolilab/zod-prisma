@@ -1,4 +1,6 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
+    // eslint-disable-next-line unicorn/prefer-module
     ...require("./jest/jest.config"),
     coverageThreshold: {
         global: {

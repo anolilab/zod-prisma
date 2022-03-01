@@ -1,14 +1,16 @@
+// eslint-disable-next-line unicorn/prefer-module
 const path = require("path");
 
 /**
  * @param {string[]} paths - the paths
  */
+// eslint-disable-next-line no-undef,unicorn/prefer-module
 const baseDirection = (...paths) => path.resolve(__dirname, "..", path.join(...paths));
 
 /**
- * @param {string[]} args - the paths
+ * @param {string[]} arguments_ - the paths
  */
-const jestDirection = (...args) => baseDirection(path.join("jest", ...args));
+const jestDirection = (...arguments_) => baseDirection(path.join("jest", ...arguments_));
 
 const environment = {
     get isUnit() {
@@ -32,6 +34,9 @@ const environment = {
     },
 };
 
+// eslint-disable-next-line unicorn/prefer-module
 exports.baseDirection = baseDirection;
+// eslint-disable-next-line unicorn/prefer-module
 exports.jestDirection = jestDirection;
+// eslint-disable-next-line unicorn/prefer-module
 exports.environment = environment;

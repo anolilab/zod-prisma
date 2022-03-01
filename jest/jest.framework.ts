@@ -15,6 +15,7 @@ expect.extend({ toMatchDiffSnapshot });
  * This is here to make `unhandledRejection` errors easier to debug
  */
 process.on("unhandledRejection", (reason) => {
+    // eslint-disable-next-line no-console
     console.error("REJECTION", reason);
 });
 
@@ -30,7 +31,5 @@ expect.addSnapshotSerializer({
         const trimmed = object.trim();
         return trimmed.length > 2 && trimmed.startsWith("<") && trimmed.endsWith(">");
     },
-    serialize: (val: string) => {
-        return diffHtml(val).trim();
-    },
+    serialize: (value: string) => diffHtml(value).trim(),
 });

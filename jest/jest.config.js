@@ -1,8 +1,10 @@
+// eslint-disable-next-line unicorn/prefer-module
 const { jestDirection, baseDirection } = require("./helpers");
 
 const { TEST_BUILD } = process.env;
 
 /** @type Partial<import("@jest/types").Config.InitialOptions> */
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
     clearMocks: true,
     verbose: true,
@@ -13,6 +15,7 @@ module.exports = {
         __E2E__: false,
     },
     transform: {
+        // eslint-disable-next-line unicorn/prefer-module
         "^.+\\.(js|jsx|ts|tsx)$": [require.resolve("babel-jest"), { rootMode: "upward" }],
     },
     testRunner: "jest-circus/runner",
