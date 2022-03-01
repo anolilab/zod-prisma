@@ -45,14 +45,14 @@
         "LICENSE.md"
     ],
     "devDependencies": {
-        "typescript": "^4.4.3",
-        "zod": "^3.8.2"
+        "typescript": "^4.5.5",
+        "zod": "^3.12.0"
     },
     "peerDependencies": {
         "zod": "^3.8.2"
     },
     "engines": {
-        "node": ">=12"
+        "node": ">=16"
     },
     "publishConfig": {
         "access": "public"

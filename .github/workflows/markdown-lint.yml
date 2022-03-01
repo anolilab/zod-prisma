@@ -45,10 +45,10 @@ jobs:
                   git config --global user.email "${EMAIL}"
                   git config --global user.name "${NAME}"
 
-            - name: "Use Node.js 14.x"
+            - name: "Use Node.js 16.x"
               uses: "actions/setup-node@v2"
               with:
-                  node-version: "14.x"
+                  node-version: "16.x"
                   # Enable this to use the github packages
                   # registry-url: "${{ env.registry_url }}"
                   # Defaults to the user or organization that owns the workflow file
@@ -62,7 +62,7 @@ jobs:
               id: "pnpm-cache" # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
               with:
                   path: "~/.pnpm-store"
-                  key: "${{ runner.os }}-node14.x-${{ hashFiles('**/pnpm-lock.yaml') }}"
+                  key: "${{ runner.os }}-node16.x-${{ hashFiles('**/pnpm-lock.yaml') }}"
                   restore-keys: |
                       ${{ runner.os }}-pnpm-
 

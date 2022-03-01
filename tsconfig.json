@@ -21,20 +21,21 @@
         /* Module Resolution Options */
         "moduleResolution": "node",
         "isolatedModules": true,
-//        "importsNotUsedAsValues": "error",
+        //        "importsNotUsedAsValues": "error",
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "exclude": [
-        "node_modules",
-        "build",
-        "scripts",
-        "acceptance-tests",
-        "jest",
-        "stories",
-        "__tests__",
-        "babel.config.cjs"
+    "exclude": ["node_modules", "build", "scripts"],
+    "include": [
+        "**/acceptance-tests/**/*",
+        "**/stories/**/*",
+        "**/__tests__/**/*",
+        "babel.config.cjs",
+        "plopfile.js",
+        "jest/**/*",
+        "jest.config.js",
+        "packages/**/*"
     ]
 }

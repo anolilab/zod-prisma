@@ -3,6 +3,7 @@ import { ZodType } from "zod";
 import { ImageDto } from "../src";
 
 const image = {
+    // eslint-disable-next-line no-secrets/no-secrets
     data: "dsanojksdafvdas4csda56v6a1c9+v4erfv6qsa1c6q",
     type: "image/jpge",
     size: {

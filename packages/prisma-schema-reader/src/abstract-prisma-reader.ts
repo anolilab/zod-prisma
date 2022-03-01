@@ -80,6 +80,7 @@ abstract class AbstractPrismaReader {
             }
 
             ["fields", "references"].forEach((item) => {
+                // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
                 const pattern = new RegExp(`${item}:[\\s\\S]\\[(.*?)\\]`);
                 const values = relationString[1].match(pattern);
                 if (values) {

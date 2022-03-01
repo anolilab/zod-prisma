@@ -21,7 +21,14 @@ jobs:
 
         strategy:
             matrix:
-                node-version: ["14.x", "16.x"]
+                os: ["ubuntu-latest"]
+                node_version: ["16.x", "17.x"]
+                include:
+                    - os: "macos-latest"
+                      node_version: "16"
+                    - os: "windows-latest"
+                      node_version: "16"
+            fail-fast: false
 
         steps:
             - name: "Git checkout"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+echo --------------------------------------------
+echo Starting Git hook: prepare-commit-msg
+
+echo Finished Git hook: prepare-commit-msg
+echo --------------------------------------------

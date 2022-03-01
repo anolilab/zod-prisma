@@ -1,0 +1,15 @@
+#!/bin/sh
+
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+# The hook should exit with non-zero status after issuing
+# an appropriate message if it wants to stop the commit.
+
+echo --------------------------------------------
+echo Starting Git hook: commit-msg
+
+npx --no -- commitlint --config ./commitlint.config.cjs --edit $1 || exit $?
+
+echo Finished Git hook: commit-msg
+echo --------------------------------------------
