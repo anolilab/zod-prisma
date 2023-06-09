@@ -18,7 +18,7 @@ importers:
       '@babel/runtime': ^7.17.2
       '@commitlint/cli': ^16.2.1
       '@commitlint/config-conventional': ^16.2.1
-      '@manypkg/cli': ^0.20.0
+      '@manypkg/cli': ^0.21.0
       '@preconstruct/cli': ^2.1.5
       '@qiwi/multi-semantic-release': ^4.0.2
       '@testing-library/jest-dom': ^5.16.2
@@ -70,7 +70,7 @@ importers:
       '@babel/runtime': 7.17.2
       '@commitlint/cli': 16.2.1
       '@commitlint/config-conventional': 16.2.1
-      '@manypkg/cli': 0.20.0
+      '@manypkg/cli': 0.21.0
       '@preconstruct/cli': 2.1.5
       '@qiwi/multi-semantic-release': 4.0.2
       '@testing-library/jest-dom': 5.16.2
@@ -2295,12 +2295,12 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: false
 
-  /@manypkg/cli/0.20.0:
-    resolution: {integrity: sha512-xOAyzHp4cF6+1VxCeVi14k4WJBbKAExuYVA+wXlCHPLoTUv64D2HQrLUOFO8bXtzW9KFhGhdP2xGFq9n9rSDiw==}
+  /@manypkg/cli/0.21.0:
+    resolution: {integrity: sha512-q/JF25il2EXtyPpc5U/Pp7TMgJot/WmFkyh7M9FiutQkliHp58UqUxIPeUObLu9EtoAp/uP21t+TMDsq1DMbeg==}
     engines: {node: '>=14.18.0'}
     hasBin: true
     dependencies:
-      '@manypkg/get-packages': 2.0.0
+      '@manypkg/get-packages': 2.2.0
       chalk: 2.4.2
       detect-indent: 6.1.0
       find-up: 4.1.0
@@ -2324,11 +2324,11 @@ packages:
       fs-extra: 8.1.0
     dev: false
 
-  /@manypkg/find-root/2.0.0:
-    resolution: {integrity: sha512-SJSQ66I6T56ssAeH3JoLqYu2Pakc+KS7KfPN9UkadbeKZ4m5TVwoRzA6ojZ4RSxjEhYEmOt4ykh0bFOujwrlXQ==}
+  /@manypkg/find-root/2.2.0:
+    resolution: {integrity: sha512-NET+BNIMmBWUUUfFtuDgaTIav6pVlkkSdI2mt+2rFWPd6TQ0DXyhQH47Ql+d7x2oIkJ69dkVKwsTErRt2ROPbw==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@manypkg/tools': 1.0.0
+      '@manypkg/tools': 1.1.0
       '@types/node': 12.20.46
       find-up: 4.1.0
       fs-extra: 8.1.0
@@ -2345,16 +2345,16 @@ packages:
       read-yaml-file: 1.1.0
     dev: false
 
-  /@manypkg/get-packages/2.0.0:
-    resolution: {integrity: sha512-S7fupHg0F+poVkLe7uhybu+JGzgmz3mC9ugeT12gjM8izUpBnahsoFwBF2RWw3rD6MjNTE00qgFNeABH3HFgiQ==}
+  /@manypkg/get-packages/2.2.0:
+    resolution: {integrity: sha512-B5p5BXMwhGZKi/syEEAP1eVg5DZ/9LP+MZr0HqfrHLgu9fq0w4ZwH8yVen4JmjrxI2dWS31dcoswYzuphLaRxg==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      '@manypkg/find-root': 2.0.0
-      '@manypkg/tools': 1.0.0
+      '@manypkg/find-root': 2.2.0
+      '@manypkg/tools': 1.1.0
     dev: false
 
-  /@manypkg/tools/1.0.0:
-    resolution: {integrity: sha512-W8uDMhDGtwNyXYr6A+MWggxdL3spOQ8rfMNYpNph1GDJ0v084MnBFdpF1jvcPZ0okHAeYccV7le8AUs+fzwsAQ==}
+  /@manypkg/tools/1.1.0:
+    resolution: {integrity: sha512-SkAyKAByB9l93Slyg8AUHGuM2kjvWioUTCckT/03J09jYnfEzMO/wSXmEhnKGYs6qx9De8TH4yJCl0Y9lRgnyQ==}
     engines: {node: '>=14.18.0'}
     dependencies:
       fs-extra: 8.1.0
@@ -7649,7 +7649,7 @@ packages:
     dev: false
 
   /isexe/2.0.0:
-    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: false
 
   /isobject/3.0.1:
