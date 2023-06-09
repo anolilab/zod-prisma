@@ -28,7 +28,7 @@ importers:
       '@typescript-eslint/eslint-plugin': ^5.12.1
       '@typescript-eslint/parser': ^5.12.1
       babel-loader: ^8.2.3
-      browserslist-config-anolilab: ^3.0.1
+      browserslist-config-anolilab: ^4.0.0
       commitizen: ^4.2.4
       cross-env: ^7.0.3
       diffable-html: ^5.0.0
@@ -80,7 +80,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.13.0_3a0304e4216f58c7e1135459c8d18e32
       '@typescript-eslint/parser': 5.13.0_eslint@7.32.0+typescript@4.6.2
       babel-loader: 8.2.3_@babel+core@7.17.5
-      browserslist-config-anolilab: 3.0.1
+      browserslist-config-anolilab: 4.0.0
       commitizen: 4.2.4
       cross-env: 7.0.3
       diffable-html: 5.0.0
@@ -4295,8 +4295,8 @@ packages:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
     dev: false
 
-  /browserslist-config-anolilab/3.0.1:
-    resolution: {integrity: sha512-KQaYLrLR70B/mPr5/twVQqJRYfVLIo8c6hRQtFzcVPtLbPzNPv+mQdCo/5seiPv9IDgxF7N5juajfpquJc/iYQ==}
+  /browserslist-config-anolilab/4.0.0:
+    resolution: {integrity: sha512-aCPj6jJkPot2hka0mvlXXIdwFtzfO/m1Q7k2eVJQ3BUiEAW4mRYEUW6RobXnrVmzfyRcrDCUTZ7K/V42uL85Hg==}
     engines: {node: '>=16'}
     dev: false
 
