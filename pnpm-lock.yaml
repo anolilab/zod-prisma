@@ -42,7 +42,7 @@ importers:
       jest-circus: ^27.5.1
       jest-diff: ^29.5.0
       jest-extended: ^2.0.0
-      jest-junit: ^13.0.0
+      jest-junit: ^16.0.0
       jest-mock: ^27.5.1
       jest-watch-typeahead: ^1.0.0
       lint-staged: ^12.3.4
@@ -94,7 +94,7 @@ importers:
       jest-circus: 27.5.1
       jest-diff: 29.5.0
       jest-extended: 2.0.0_jest@27.5.1
-      jest-junit: 13.0.0
+      jest-junit: 16.0.0
       jest-mock: 27.5.1
       jest-watch-typeahead: 1.0.0_jest@27.5.1
       lint-staged: 12.3.4
@@ -7989,8 +7989,8 @@ packages:
       - supports-color
     dev: false
 
-  /jest-junit/13.0.0:
-    resolution: {integrity: sha512-JSHR+Dhb32FGJaiKkqsB7AR3OqWKtldLd6ZH2+FJ8D4tsweb8Id8zEVReU4+OlrRO1ZluqJLQEETm+Q6/KilBg==}
+  /jest-junit/16.0.0:
+    resolution: {integrity: sha512-A94mmw6NfJab4Fg/BlvVOUXzXgF0XIH6EmTgJ5NDPp4xoKq0Kr7sErb+4Xs9nZvu58pJojz5RFGpqnZYJTrRfQ==}
     engines: {node: '>=10.12.0'}
     dependencies:
       mkdirp: 1.0.4
@@ -11520,7 +11520,7 @@ packages:
     dev: false
 
   /strip-ansi/4.0.0:
-    resolution: {integrity: sha1-qEeQIusaw2iocTibY1JixQXuNo8=}
+    resolution: {integrity: sha512-4XaJ2zQdCzROZDivEVIDPkcQn8LMFSa8kj8Gxb/Lnwzv9A8VctNZ+lfivC/sV3ivW8ElJTERXZoPBRrZKkNKow==}
     engines: {node: '>=4'}
     dependencies:
       ansi-regex: 3.0.0
@@ -12851,7 +12851,7 @@ packages:
     dev: false
 
   /xml/1.0.1:
-    resolution: {integrity: sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=}
+    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
     dev: false
 
   /xmlchars/2.2.0:
