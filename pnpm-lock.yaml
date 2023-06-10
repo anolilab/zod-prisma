@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@anolilab/babel-preset': ^5.0.1
       '@anolilab/eslint-config': ^3.0.1
-      '@anolilab/prettier-config': ^3.0.0
+      '@anolilab/prettier-config': ^4.0.0
       '@anolilab/semantic-release-preset': ^2.0.1
       '@anolilab/textlint-config': ^4.0.0
       '@babel/cli': ^7.17.6
@@ -58,7 +58,7 @@ importers:
     dependencies:
       '@anolilab/babel-preset': 5.0.1_@babel+core@7.17.5
       '@anolilab/eslint-config': 3.0.1_d90b8612583f40c143549c092075193f
-      '@anolilab/prettier-config': 3.0.0_prettier@2.5.1
+      '@anolilab/prettier-config': 4.0.0_prettier@2.5.1
       '@anolilab/semantic-release-preset': 2.0.1_semantic-release@19.0.2
       '@anolilab/textlint-config': 4.0.0_textlint@12.1.1
       '@babel/cli': 7.17.6_@babel+core@7.17.5
@@ -243,13 +243,22 @@ packages:
       - typescript
     dev: false
 
-  /@anolilab/prettier-config/3.0.0_prettier@2.5.1:
-    resolution: {integrity: sha512-gHU52bz3qKoLpCQEDBxftI2QlacMxxaDE55n+CSZoiN5/shLJTONqNALSRtgPs/8WdW0tSBljYmws/KlRcIRxQ==}
+  /@anolilab/package-json-utils/1.0.1:
+    resolution: {integrity: sha512-D5pN2gfw530AD/qPlVQPv41ZsbnorTBUZP8VVb8cWRDPpFyXZ0+k3YTWctX4k8wX4TxNF0L/x3NQvrFo7Gt+Jw==}
+    engines: {node: '>=16'}
+    dependencies:
+      dot-path-value: 0.0.10
+      read-pkg-up: 7.0.1
+    dev: false
+
+  /@anolilab/prettier-config/4.0.0_prettier@2.5.1:
+    resolution: {integrity: sha512-44or0PZibl63lVmDi/5sP4Yx+w41Hzrtpi6dTBRSzQlqiXHv+5vmHEe+OlVVazL3l9Gov9uFZtx1N+wU0ArQEg==}
     engines: {node: '>=16'}
     requiresBuild: true
     peerDependencies:
       prettier: 2.x
     dependencies:
+      '@anolilab/package-json-utils': 1.0.1
       prettier: 2.5.1
     dev: false
 
@@ -5347,6 +5356,10 @@ packages:
     dependencies:
       no-case: 3.0.4
       tslib: 2.3.1
+    dev: false
+
+  /dot-path-value/0.0.10:
+    resolution: {integrity: sha512-MrVpDoFwk1xjeM0sGRuei7N3LQOylJ9iamgfxAQwPY0hPnDHL981hM/KpoQwFHMckgjZvJA0MyH7VN//ernFFA==}
     dev: false
 
   /dot-prop/5.3.0:
