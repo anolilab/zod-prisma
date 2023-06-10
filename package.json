@@ -43,7 +43,7 @@
         "extends browserslist-config-anolilab"
     ],
     "dependencies": {
-        "@anolilab/babel-preset": "^5.0.1",
+        "@anolilab/babel-preset": "^7.0.0",
         "@anolilab/eslint-config": "^3.0.1",
         "@anolilab/prettier-config": "^3.0.0",
         "@anolilab/semantic-release-preset": "^2.0.1",
