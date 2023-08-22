@@ -59,7 +59,7 @@
         "@commitlint/config-conventional": "^16.2.1",
         "@manypkg/cli": "^0.21.0",
         "@preconstruct/cli": "^2.1.5",
-        "@qiwi/multi-semantic-release": "^4.0.2",
+        "@qiwi/multi-semantic-release": "^7.0.0",
         "@testing-library/jest-dom": "^5.16.2",
         "@types/jest": "^27.4.1",
         "@types/jest-axe": "^3.5.3",
