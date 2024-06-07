@@ -38,7 +38,7 @@ importers:
       husky: ^7.0.4
       is-ci: ^3.0.1
       jest: ^27.5.1
-      jest-axe: ^5.0.1
+      jest-axe: ^9.0.0
       jest-circus: ^27.5.1
       jest-diff: ^29.5.0
       jest-extended: ^2.0.0
@@ -90,7 +90,7 @@ importers:
       husky: 7.0.4
       is-ci: 3.0.1
       jest: 27.5.1_ts-node@10.5.0
-      jest-axe: 5.0.1
+      jest-axe: 9.0.0
       jest-circus: 27.5.1
       jest-diff: 29.5.0
       jest-extended: 2.0.0_jest@27.5.1
@@ -4032,16 +4032,10 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /axe-core/4.2.1:
-    resolution: {integrity: sha512-evY7DN8qSIbsW2H/TWQ1bX3sXN1d4MNb5Vb4n7BzPuCwRHdkZ1H2eNLuSh73EoQqkGKUtju2G2HCcjCfhvZIAA==}
+  /axe-core/4.9.1:
+    resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
     dev: false
-
-  /axe-core/4.4.1:
-    resolution: {integrity: sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw==}
-    engines: {node: '>=4'}
-    dev: false
-    optional: true
 
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
@@ -4457,14 +4451,6 @@ packages:
   /chalk/3.0.0:
     resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
     engines: {node: '>=8'}
-    dependencies:
-      ansi-styles: 4.3.0
-      supports-color: 7.2.0
-    dev: false
-
-  /chalk/4.1.0:
-    resolution: {integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==}
-    engines: {node: '>=10'}
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
@@ -5782,7 +5768,7 @@ packages:
       aria-query: 4.2.2
       array-includes: 3.1.4
       ast-types-flow: 0.0.7
-      axe-core: 4.4.1
+      axe-core: 4.9.1
       axobject-query: 2.2.0
       damerau-levenshtein: 1.0.8
       emoji-regex: 9.2.2
@@ -6272,7 +6258,7 @@ packages:
     dependencies:
       '@jest/expect-utils': 29.0.3
       jest-get-type: 29.4.3
-      jest-matcher-utils: 29.0.3
+      jest-matcher-utils: 29.2.2
       jest-message-util: 29.0.3
       jest-util: 29.0.3
     dev: false
@@ -7719,13 +7705,13 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: false
 
-  /jest-axe/5.0.1:
-    resolution: {integrity: sha512-MMOWA6gT4pcZGbTLS8ZEqABH08Lnj5bInfLPpn9ADWX2wFF++odbbh8csmSfkwKjHaioVPzlCtIypAtxFDx/rw==}
-    engines: {node: '>= 10.0.0'}
+  /jest-axe/9.0.0:
+    resolution: {integrity: sha512-Xt7O0+wIpW31lv0SO1wQZUTyJE7DEmnDEZeTt9/S9L5WUywxrv8BrgvTuQEqujtfaQOcJ70p4wg7UUgK1E2F5g==}
+    engines: {node: '>= 16.0.0'}
     dependencies:
-      axe-core: 4.2.1
-      chalk: 4.1.0
-      jest-matcher-utils: 27.0.2
+      axe-core: 4.9.1
+      chalk: 4.1.2
+      jest-matcher-utils: 29.2.2
       lodash.merge: 4.6.2
     dev: false
 
@@ -8007,16 +7993,6 @@ packages:
       pretty-format: 27.5.1
     dev: false
 
-  /jest-matcher-utils/27.0.2:
-    resolution: {integrity: sha512-Qczi5xnTNjkhcIB0Yy75Txt+Ez51xdhOxsukN7awzq2auZQGPHcQrJ623PZj0ECDEMOk2soxWx05EXdXGd1CbA==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dependencies:
-      chalk: 4.1.2
-      jest-diff: 27.5.1
-      jest-get-type: 27.5.1
-      pretty-format: 27.5.1
-    dev: false
-
   /jest-matcher-utils/27.5.1:
     resolution: {integrity: sha512-z2uTx/T6LBaCoNWNFWwChLBKYxTMcGBRjAt+2SbP929/Fflb9aa5LGma654Rz8z9HLxsrUaYzxE9T/EFIL/PAw==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -8029,6 +8005,16 @@ packages:
 
   /jest-matcher-utils/29.0.3:
     resolution: {integrity: sha512-RsR1+cZ6p1hDV4GSCQTg+9qjeotQCgkaleIKLK7dm+U4V/H2bWedU3RAtLm8+mANzZ7eDV33dMar4pejd7047w==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+    dependencies:
+      chalk: 4.1.2
+      jest-diff: 29.5.0
+      jest-get-type: 29.4.3
+      pretty-format: 29.5.0
+    dev: false
+
+  /jest-matcher-utils/29.2.2:
+    resolution: {integrity: sha512-4DkJ1sDPT+UX2MR7Y3od6KtvRi9Im1ZGLGgdLFLm4lPexbTaCgJW5NN3IOXlQHF7NSHY/VHhflQ+WoKtD/vyCw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       chalk: 4.1.2
