@@ -90,7 +90,7 @@ jobs:
                   path: "./coverage/junit.xml"
                   reporter: "jest-junit"
 
-            - uses: "codecov/codecov-action@v2"
+            - uses: "codecov/codecov-action@v5"
               with:
                   flags: "unittests" # optional
                   name: "codecov-umbrella" # optional
