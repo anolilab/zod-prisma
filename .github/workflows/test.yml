@@ -83,7 +83,7 @@ jobs:
                   path: "./coverage/junit.xml"
 
             - name: "Create test report"
-              uses: "dorny/test-reporter@v1"
+              uses: "dorny/test-reporter@v2"
               if: "success() || failure()"
               with:
                   name: "JEST Tests"
