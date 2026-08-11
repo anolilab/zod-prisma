@@ -27,7 +27,6 @@ branches:
 
               apps:
                   - "semantic-release-bot"
-                  - "renovate"
               teams: []
 #               users: []
 
